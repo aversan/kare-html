@@ -1,0 +1,11 @@
+.btn_up {
+  height: 48px;
+  background-color: rgba($gray-700, 0.05);
+  color: $gray-600;
+  padding: .75rem 1.5rem;
+
+  &:hover,
+  &:focus {
+    color: $gray-600;
+  }
+}
