@@ -21,6 +21,36 @@ module.exports = {
     serveStatic: ['public'],
     rewriteRules: [
       {
+        match: new RegExp(/<link href="\/local\/templates\/kare_redisign\/css\/fonts\.css\?14944915562349" type="text\/css"  data-template-style="true"  rel="stylesheet" \/>/),
+        fn: function() {
+          return '';
+        }
+      },
+      {
+        match: new RegExp(/<link href="\/local\/templates\/kare_redisign\/css\/styles\.css\?149449155699052" type="text\/css"  data-template-style="true"  rel="stylesheet" \/>/),
+        fn: function() {
+          return '';
+        }
+      },
+      {
+        match: new RegExp(/<link href="\/local\/templates\/kare_redisign\/css\/custom\.css\?149449155683923" type="text\/css"  data-template-style="true"  rel="stylesheet" \/>/),
+        fn: function() {
+          return '';
+        }
+      },
+      {
+        match: new RegExp(/<link href="\/local\/templates\/kare_redisign\/css\/fonts\.css" rel='stylesheet' type='text\/css'>/),
+        fn: function() {
+          return '';
+        }
+      },
+      {
+        match: new RegExp(/<link href="\/local\/templates\/kare_redisign\/css\/new_main_page\.css\?v=2" rel='stylesheet' type='text\/css'>/),
+        fn: function() {
+          return '';
+        }
+      },
+      {
         match: new RegExp('local/templates/kare_redisign/css/styles_new.css'),
         fn: function() {
           return 'stylesheets/app.css';

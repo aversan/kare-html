@@ -31,12 +31,13 @@ $theme-colors: (
   primary: $pink-light,
   secondary: $white,
   black: $black,
+  gray-light: $gray-200,
   gray: $gray-600,
-  gray-dark: $gray-700
+  gray-dark: $gray-700,
   // success: $green,
   // info: $cyan,
   // warning: $yellow,
-  // danger: $red,
+  danger: $pink,
   // light: $gray-100,
   // dark: $gray-700
 );
