@@ -7,7 +7,7 @@ $black: #000000;
 $gray-100: #fafafa;
 $gray-200: #f2f2f2; // white-two
 $gray-300: #e5e5e5; // white
-$gray-400: #cccccc; // pinkish-grey
+$gray-400: #cbcbcb; // pinkish-grey
 $gray-500: #999999; // warm-grey-two
 $gray-600: #7e7e7e; // warm-grey
 $gray-700: #4d4d4d; // greyish-brown
@@ -90,7 +90,7 @@ $body-color: $gray-700;
 //
 // Style anchor elements.
 
-$link-color: theme-color("primary");
+$link-color: $gray-600;
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: none;

@@ -1,3 +1,17 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+button {
+  border: 0;
+}
+
 p:last-child,
 .text-content p:last-child {
   margin-bottom: 0;

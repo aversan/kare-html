@@ -136,9 +136,13 @@
 
 .main-catalog {
   .bx_filter_vertical {
-    padding: 30px 35px 60px;
+    padding: 20px;
     background: $white;
     border: 1px solid $border-color;
+
+    @include media-breakpoint-down(sm) {
+      padding: 32px;
+    }
   }
 
   .bx_filter_container_title {
@@ -146,9 +150,12 @@
   }
 
   .bx_filter_vertical {
-    .active .bx_filter_container_title,
     .bx_filter_container_title:hover {
-      color: theme-color("primary");
+      color: theme-color("gray-dark");
+    }
+
+    .bx_ui_slider_track {
+      background-color: $gray-400;
     }
 
     .bx_ui_slider_track {
@@ -157,12 +164,12 @@
       }
 
       .ui-slider-handle {
-        top: -7px;
+        top: -8px;
         width: 16px;
         height: 16px;
         background: $white;
         border-radius: 50%;
-        box-shadow: 0 0 3px 1px $gray-300;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
         outline: none;
       }
     }
@@ -174,36 +181,42 @@
 }
 
 .bx_filter_reset {
-  padding: 0 15px;
 }
 
 .bx_filter_reset_btn {
   font-size: 13px;
-  line-height: 50px;
   font-weight: 700;
+  line-height: 17px;
   text-transform: uppercase;
+  letter-spacing: .3px;
   text-decoration: none;
-  color: #979797;
+  padding: 20px;
+  display: block;
 }
 
 .bx_filter_submit_btn {
   display: block;
   width: 200px;
-  height: 40px;
+  height: 32px;
   margin: 15px auto 0;
   font-size: 13px;
-  line-height: 40px;
-  font-weight: 700;
-  color: $white;
-  background: theme-color("primary");
+  line-height: 32px;
+  font-weight: 500;
   cursor: pointer;
+  background: theme-color("primary");
+  color: $white;
+
 }
 
 .icon-wrapper_filter {
-  position: absolute;
-  top: 15px;
-  right: 17px;
   transform: rotate(-90deg);
+  order: -99;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-right: 8px;
+  opacity: .5;
 }
 
 .active .icon-wrapper_filter {
@@ -213,12 +226,7 @@
 .icon-wrapper_filter .icon_arrow {
   width: 5px;
   height: 9px;
-  stroke: #979797;
-}
-
-.bx_filter_container_title:hover .icon_arrow,
-.active .icon-wrapper_filter .icon_arrow {
-  stroke: theme-color("primary");
+  stroke: $black;
 }
 
 .main-catalog .bx_filter_vertical .bx_filter_container_title:before {
@@ -229,6 +237,7 @@
   position: absolute;
   top: 20px;
   right: 16px;
+
   .icon_close {
     width: 10px;
     fill: #979797;
@@ -252,12 +261,12 @@
     &:before {
       content: '';
       position: absolute;
-      top: 0;
+      top: 2px;
       left: 0;
-      width: 12px;
-      height: 12px;
-      border: 1px solid #dbdbdb;
-      border-radius: 2px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $gray-400;
+      background-color: $gray-100;
     }
 
     &:hover:before {
@@ -273,12 +282,11 @@
     &:after {
       content: '';
       position: absolute;
-      top: 3px;
-      left: 3px;
+      top: 6px;
+      left: 4px;
       width: 8px;
       height: 8px;
       background-color: theme-color("primary");
-      border-radius: 2px;
     }
   }
 }
@@ -472,17 +480,6 @@
       padding: 0;
       border: none;
     }
-
-    .bx_filter_container_title,
-    .bx_filter_block,
-    .bx_filter_reset {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
-  .icon-wrapper_close-filter {
-    right: 0;
   }
 
   .icon-wrapper_filter {
