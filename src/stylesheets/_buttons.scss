@@ -1,3 +1,59 @@
+.btn {
+  overflow: hidden;
+  max-width: 100%;
+
+  &.disabled,
+  &:disabled {
+    opacity: .6;
+  }
+
+  &.text-uppercase {
+    font-weight: 500;
+
+    &:not(.btn-xs) {
+      font-size: .8125rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__icon {
+    &:first-child {
+      margin-left: -.25rem;
+    }
+
+    &:last-child {
+      margin-right: -.25rem;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  color: $gray-700;
+
+  &:hover,
+  &:focus {
+    border-color: $gray-500;
+    background-color: transparent;
+    color: $gray-700;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: transparent;
+    border-color: theme-color("primary");
+    color: theme-color("primary");
+  }
+
+  &_checked {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $blue;
+      color: $gray-700;
+    }
+  }
+}
+
 .btn_up {
   height: 48px;
   background-color: rgba($gray-700, 0.05);
@@ -8,4 +64,12 @@
   &:focus {
     color: $gray-600;
   }
+}
+
+.btn-width-small {
+  min-width: 160px;
+}
+
+.btn-width-medium {
+  min-width: 180px;
 }

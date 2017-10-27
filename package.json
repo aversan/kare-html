@@ -65,8 +65,13 @@
   "devDependencies": {
     "bootstrap": "4.0.0-beta",
     "chai": "3.5.0",
+    "exports-loader": "^0.6.4",
     "gulp": "3.9.1",
-    "mocha": "3.2.0"
+    "jquery": "^3.2.1",
+    "mocha": "3.2.0",
+    "svg-loader": "0.0.2",
+    "svgxuse": "^1.2.6",
+    "uikit": "^3.0.0-beta.32"
   },
   "author": "aversanio@gmail.com"
 }

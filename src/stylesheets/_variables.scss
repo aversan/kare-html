@@ -29,7 +29,7 @@ $colors: (
 
 $theme-colors: (
   primary: $pink-light,
-  secondary: $white,
+  secondary: $gray-400,
   black: $black,
   gray-light: $gray-200,
   gray: $gray-600,
@@ -68,7 +68,10 @@ $spacers: (
   2: ($spacer * .5), // 8px
   3: $spacer, // 16px
   4: ($spacer * 1.5), // 24px
-  5: ($spacer * 2) // 32px
+  5: ($spacer * 2), // 32px
+  6: ($spacer * 2.5), // 40px
+  7: ($spacer * 4), // 64px
+  8: ($spacer * 5) // 80px
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -109,14 +112,18 @@ $paragraph-margin-bottom: 1rem;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 360px,
+  sm: 576px,
   md: 768px,
-  lg: 1024px,
-  xl: 1280px
+  lg: 992px,
+  xl: 1200px
 );
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
 
 // Grid containers
 //
@@ -136,7 +143,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12;
-$grid-gutter-width: 32px;
+$grid-gutter-width: 20px;
 
 // Components
 //
@@ -157,9 +164,9 @@ $border-color: $gray-300;
 
 // $caret-width:            .3em !default;
 
-// $transition-base:        all .2s ease-in-out !default;
-// $transition-fade:        opacity .15s linear !default;
-// $transition-collapse:    height .35s ease !default;
+$transition-base: all .2s ease-in-out;
+$transition-fade: opacity .15s linear;
+$transition-collapse: height .35s ease;
 
 
 // Fonts
@@ -183,22 +190,22 @@ $font-weight-bold: bold;
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.6;
 
-$h1-font-size: 2.8125rem;
+$h1-font-size: 2.8125rem; // 45px
 $h1-line-height: 1;
 
-$h2-font-size: 1.875rem;
+$h2-font-size: 1.875rem; // 30px
 $h2-line-height: 1.16667;
 
-$h3-font-size: 1.5625rem;
+$h3-font-size: 1.5625rem; // 25px
 $h3-line-height: 1.2;
 
-$h4-font-size: 1.0625rem;
+$h4-font-size: 1.0625rem; // 17px
 $h4-line-height: 1.3529;
 
-$h5-font-size: .8125rem;
+$h5-font-size: .8125rem; // 13px
 $h5-line-height: 1.3077;
 
-$h6-font-size: .8125rem;
+$h6-font-size: .8125rem; // 13px
 $h6-line-height: 1.3077;
 
 $headings-margin-bottom: ($spacer / 2);
@@ -264,71 +271,68 @@ $mark-bg: #fcf8e3;
 
 
 // Buttons
-//
-// For each of Bootstrap's buttons, define text, background and border color.
 
-// $input-btn-padding-y:       .5rem !default;
-// $input-btn-padding-x:       .75rem !default;
-// $input-btn-line-height:     1.25 !default;
+$input-btn-padding-y: .5rem;
+$input-btn-padding-x: .75rem;
+$input-btn-line-height: 1.5;
 
-// $input-btn-padding-y-sm:    .25rem !default;
-// $input-btn-padding-x-sm:    .5rem !default;
-// $input-btn-line-height-sm:  1.5 !default;
+$input-btn-padding-y-sm: .25rem;
+$input-btn-padding-x-sm: .75rem;
+$input-btn-line-height-sm: 1.5;
 
 // $input-btn-padding-y-lg:    .5rem !default;
 // $input-btn-padding-x-lg:    1rem !default;
 // $input-btn-line-height-lg:  1.5 !default;
 
-// $btn-font-weight:                $font-weight-normal !default;
-// $btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
-// $btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
-// $btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
+$btn-font-weight: 400;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
 
 // $btn-link-disabled-color:        $gray-600 !default;
 
 // $btn-block-spacing-y:            .5rem !default;
 
-// Allows for customizing button radius independently from global border radius
-// $btn-border-radius:              $border-radius !default;
-// $btn-border-radius-lg:           $border-radius-lg !default;
-// $btn-border-radius-sm:           $border-radius-sm !default;
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
 
-// $btn-transition:                 background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
 
 // Forms
 
-// $input-bg:                       $white !default;
-// $input-disabled-bg:              $gray-200 !default;
+$input-bg: $white;
+$input-disabled-bg: $gray-100;
+$input-disabled-border-color: $gray-300;
 
-// $input-color:                    $gray-700 !default;
-// $input-border-color:             rgba($black,.15) !default;
-// $input-btn-border-width:         $border-width !default; // For form controls and buttons
-// $input-box-shadow:               inset 0 1px 1px rgba($black,.075) !default;
+$input-color: $gray-700;
+$input-border-color: $gray-400;
+$input-btn-border-width: $border-width; // For form controls and buttons
+$input-box-shadow: none;
 
-// $input-border-radius:            $border-radius !default;
-// $input-border-radius-lg:         $border-radius-lg !default;
-// $input-border-radius-sm:         $border-radius-sm !default;
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
 
-// $input-focus-bg:                 $input-bg !default;
-// $input-focus-border-color:       lighten(theme-color("primary"), 25%) !default;
-// $input-focus-box-shadow:         $input-box-shadow, $btn-focus-box-shadow !default;
-// $input-focus-color:              $input-color !default;
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $gray-500;
+$input-focus-box-shadow: none;
+$input-focus-color: $gray-700;
 
-// $input-placeholder-color:        $gray-600 !default;
+$input-placeholder-color: $gray-500;
 
-// $input-height-border:           $input-btn-border-width * 2 !default;
+$input-height-border: $input-btn-border-width * 2;
 
-// $input-height-inner:            ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2) !default;
-// $input-height:                  calc(#{$input-height-inner} + #{$input-height-border}) !default;
+$input-height-inner: ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2);
+$input-height: calc(#{$input-height-inner} + #{$input-height-border});
 
-// $input-height-inner-sm:         ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
-// $input-height-sm:               calc(#{$input-height-inner-sm} + #{$input-height-border}) !default;
+$input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2);
+$input-height-sm: calc(#{$input-height-inner-sm} + #{$input-height-border});
 
-// $input-height-inner-lg:         ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default;
-// $input-height-lg:               calc(#{$input-height-inner-lg} + #{$input-height-border}) !default;
-
-// $input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
+$input-height-inner-lg: ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2);
+$input-height-lg: calc(#{$input-height-inner-lg} + #{$input-height-border});
+$input-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
 // $form-text-margin-top:     .25rem !default;
 
@@ -346,38 +350,42 @@ $mark-bg: #fcf8e3;
 // $input-group-addon-border-color: $input-border-color !default;
 // $input-group-btn-border-color:   $input-border-color !default;
 
-// $custom-control-gutter:   1.5rem !default;
-// $custom-control-spacer-y: .25rem !default;
-// $custom-control-spacer-x: 1rem !default;
+$custom-control-gutter: 1.5rem;
+$custom-control-spacer-y: .25rem;
+$custom-control-spacer-x: 1rem;
 
-// $custom-control-indicator-size:       1rem !default;
-// $custom-control-indicator-bg:         #ddd !default;
-// $custom-control-indicator-bg-size:    50% 50% !default;
-// $custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba($black,.1) !default;
+$custom-control-indicator-size: 1rem;
+$custom-control-indicator-bg: $gray-100;
+$custom-control-indicator-bg-size: 75% 75%;
+$custom-control-indicator-box-shadow: none;
 
-// $custom-control-indicator-disabled-bg:       $gray-200 !default;
-// $custom-control-description-disabled-color:  $gray-600 !default;
+$custom-control-indicator-disabled-bg: $gray-100;
+$custom-control-indicator-disabled-border: $gray-300;
+$custom-control-description-disabled-color: $gray-500;
 
-// $custom-control-indicator-checked-color:      $white !default;
-// $custom-control-indicator-checked-bg:         theme-color("primary") !default;
-// $custom-control-indicator-checked-box-shadow: none !default;
+$custom-control-indicator-checked-color: $white;
+$custom-control-indicator-checked-bg: theme-color("primary");
+$custom-control-indicator-checked-box-shadow: none;
 
-// $custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px theme-color("primary") !default;
+$custom-control-indicator-radio-checked-color: theme-color("primary");
+$custom-control-indicator-radio-checked-bg: $white;
 
-// $custom-control-indicator-active-color:      $white !default;
-// $custom-control-indicator-active-bg:         lighten(theme-color("primary"), 35%) !default;
-// $custom-control-indicator-active-box-shadow: none !default;
+$custom-control-indicator-focus-box-shadow: none; // 0 0 0 1px $body-bg, 0 0 0 3px theme-color("primary")
 
-// $custom-checkbox-indicator-border-radius: $border-radius !default;
-// $custom-checkbox-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-control-indicator-active-color: $white;
+$custom-control-indicator-active-bg: lighten(theme-color("primary"), 35%);
+$custom-control-indicator-active-box-shadow: none;
 
-// $custom-checkbox-indicator-indeterminate-bg: theme-color("primary") !default;
-// $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
-// $custom-checkbox-indicator-icon-indeterminate: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23") !default;
-// $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
+$custom-checkbox-indicator-border-radius: 0;
+$custom-checkbox-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23");
 
-// $custom-radio-indicator-border-radius: 50% !default;
-// $custom-radio-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-checkbox-indicator-indeterminate-bg: theme-color("primary");
+$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color;
+$custom-checkbox-indicator-icon-indeterminate: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23");
+$custom-checkbox-indicator-indeterminate-box-shadow: none;
+
+$custom-radio-indicator-border-radius: 50%;
+$custom-radio-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-radio-checked-color}'/%3E%3C/svg%3E"), "#", "%23");
 
 // $custom-select-padding-y:          .375rem !default;
 // $custom-select-padding-x:          .75rem  !default;
@@ -522,30 +530,30 @@ $nav-link-padding-x: 1rem;
 
 // Pagination
 
-// $pagination-padding-y:                .5rem !default;
-// $pagination-padding-x:                .75rem !default;
-// $pagination-padding-y-sm:             .25rem !default;
-// $pagination-padding-x-sm:             .5rem !default;
-// $pagination-padding-y-lg:             .75rem !default;
-// $pagination-padding-x-lg:             1.5rem !default;
-// $pagination-line-height:              1.25 !default;
+$pagination-padding-y: .5rem;
+$pagination-padding-x: .75rem;
+//$pagination-padding-y-sm:             .25rem !default;
+//$pagination-padding-x-sm:             .5rem !default;
+//$pagination-padding-y-lg:             .75rem !default;
+//$pagination-padding-x-lg:             1.5rem !default;
+$pagination-line-height: 1.75;
 
-// $pagination-color:                     $link-color !default;
-// $pagination-bg:                        $white !default;
-// $pagination-border-width:              $border-width !default;
-// $pagination-border-color:              #ddd !default;
+$pagination-color: $gray-700;
+$pagination-bg: $white;
+$pagination-border-width: $border-width;
+$pagination-border-color: $gray-400;
 
-// $pagination-hover-color:               $link-hover-color !default;
-// $pagination-hover-bg:                  $gray-200 !default;
-// $pagination-hover-border-color:        #ddd !default;
+$pagination-hover-color: $gray-700;
+$pagination-hover-bg: $white;
+$pagination-hover-border-color: $gray-500;
 
-// $pagination-active-color:              $white !default;
-// $pagination-active-bg:                 theme-color("primary") !default;
-// $pagination-active-border-color:       theme-color("primary") !default;
+$pagination-active-color: $gray-700;
+$pagination-active-bg: $blue;
+$pagination-active-border-color: $gray-400;
 
-// $pagination-disabled-color:            $gray-600 !default;
-// $pagination-disabled-bg:               $white !default;
-// $pagination-disabled-border-color:     #ddd !default;
+$pagination-disabled-color: $gray-700;
+$pagination-disabled-bg: $white;
+$pagination-disabled-border-color: $gray-400;
 
 
 // Jumbotron
@@ -729,16 +737,14 @@ $nav-link-padding-x: 1rem;
 
 // Breadcrumbs
 
-// $breadcrumb-padding-y:          .75rem !default;
-// $breadcrumb-padding-x:          1rem !default;
-// $breadcrumb-item-padding:       .5rem !default;
-
-// $breadcrumb-margin-bottom:      1rem !default;
-
-// $breadcrumb-bg:                 $gray-200 !default;
-// $breadcrumb-divider-color:      $gray-600 !default;
-// $breadcrumb-active-color:       $gray-600 !default;
-// $breadcrumb-divider:            "/" !default;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: .5rem;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $gray-400;
+$breadcrumb-active-color: $gray-600;
+$breadcrumb-divider: "›";
 
 
 // Carousel
@@ -783,3 +789,19 @@ $nav-link-padding-x: 1rem;
 
 // $pre-color:                   $gray-900 !default;
 // $pre-scrollable-max-height:   340px !default;
+
+
+// Offcanvas
+
+$offcanvas-z-index: 100;
+$offcanvas-bar-width: 100%;
+$offcanvas-bar-padding-vertical: 32px;
+$offcanvas-bar-padding-horizontal: 32px;
+$offcanvas-bar-background: $white;
+$offcanvas-bar-color-mode: inherit;
+$offcanvas-bar-width-m: 335px;
+$offcanvas-bar-padding-vertical-m: 20px;
+$offcanvas-bar-padding-horizontal-m: 20px;
+$offcanvas-close-position: 20px;
+$offcanvas-close-padding: 0;
+$offcanvas-overlay-background: rgba($gray-600, 0.5);

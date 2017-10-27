@@ -32,7 +32,7 @@ const htmlTask = function() {
     .on('error', handleErrors)
     .pipe(nunjucksRender(TASK_CONFIG.html.nunjucksRender))
     .on('error', handleErrors)
-    .pipe(gulpif(global.production, htmlmin(TASK_CONFIG.html.htmlmin)))
+    // .pipe(gulpif(global.production, htmlmin(TASK_CONFIG.html.htmlmin)))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream())
 }

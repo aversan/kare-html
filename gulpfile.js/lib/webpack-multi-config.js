@@ -35,7 +35,16 @@ module.exports = function (env) {
       filename: rev ? '[name]-[hash].js' : '[name].js',
       publicPath: publicPath
     },
-    plugins: [],
+    plugins: [
+      new webpack.ProvidePlugin({
+        jQuery: 'jquery',
+        $: 'jquery',
+        jquery: 'jquery',
+        'window.jQuery': 'jquery',
+        Util: 'exports-loader?Util!bootstrap/js/dist/util',
+        Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse'
+      })
+    ],
     resolve: {
       extensions: extensions,
       alias: TASK_CONFIG.javascripts.alias,

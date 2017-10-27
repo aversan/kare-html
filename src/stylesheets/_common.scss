@@ -33,7 +33,7 @@ html {
 .page-body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .page-wrapper {
@@ -87,4 +87,41 @@ html {
 
 .hidden {
   display: none !important;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.divider {
+  margin-top: map-get($spacers, 7);
+
+  @include media-breakpoint-down(xs) {
+    margin-top: map-get($spacers, 5);
+  }
+}
+
+.divider-2 {
+  margin-top: map-get($spacers, 8);
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+.uk-offcanvas-close {
+  background-color: transparent;
+  opacity: .5;
+  line-height: 18px;
+
+  &:hover {
+    opacity: .75;
+  }
+
+  &,
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
 }

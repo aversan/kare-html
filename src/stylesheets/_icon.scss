@@ -15,6 +15,42 @@
     transform: translate(-50%, -50%);
   }
 
+  &_search,
+  &_search svg{
+    width: 16px;
+    height: 16px;
+  }
+
+  &_like,
+  &_like svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  &_basket,
+  &_basket svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  &_phone,
+  &_phone svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  &_user,
+  &_user svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  &_star,
+  &_star svg {
+    width: 12px;
+    height: 12px;
+  }
+
   &_hoverable {
     cursor: pointer;
   }
@@ -30,6 +66,25 @@
     &,
     & svg {
       color: $black;
+    }
+  }
+
+  &_black-muted {
+    &,
+    & svg {
+      color: $black;
+    }
+
+    & {
+      opacity: .5;
+    }
+  }
+
+  &_sm {
+    &,
+    & svg {
+      width: 16px;
+      height: 16px;
     }
   }
 
@@ -53,6 +108,21 @@
     &.icon_instagram svg {
       width: 22px;
       height: 22px;
+    }
+  }
+
+  &_triangle {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 4px 4px 4px;
+      border-color: transparent transparent theme-color("gray-dark") transparent;
     }
   }
 }

@@ -1,18 +1,3 @@
-button {
-  text-transform: uppercase;
-  font-size: 12px;
-  outline: none;
-}
-
-input {
-  &[type='submit'],
-  &[type='button'] {
-    text-transform: uppercase;
-    font-size: 12px;
-    outline: none;
-  }
-}
-
 .basket_button {
   text-transform: uppercase;
   font-size: 12px;

@@ -18,6 +18,16 @@ module.exports = {
       loader: 'babel-loader',
       exclude: /node_modules/
     },
+    loaders: [
+      {
+        test: /\.svg$/,
+        use: ['babel-loader',
+          {
+            loader: 'svg-loader'
+          }
+        ]
+      }
+    ],
     babel: {
       presets: [["es2015", { "modules": false }], 'stage-1']
     },
