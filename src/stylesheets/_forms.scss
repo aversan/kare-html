@@ -1,0 +1,6 @@
+.form-control {
+  &:disabled,
+  &[readonly] {
+    border-color: $input-disabled-border-color;
+  }
+}
