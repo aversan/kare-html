@@ -26,10 +26,13 @@
 </div>
 <div class="divider"></div>
 <div class="container-fluid container-max-width">
-  <h1 class="catalog-title mb-3">Диваны и кресла</h1>
+  <h1 class="catalog-title mb-4 mb-sm-3">Диваны и кресла</h1>
   <div class="row">
-    <div class="col col-side">
-          <div class="catalog-filter d-flex flex-column mt-md-4 js-catalog-filter">
+    <div class="col col-12 col-md-side">
+      <div id="offcanvas-catalog-filter" uk-offcanvas="mode: push; overlay: true" class="catalog-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+    <div class="catalog-filter d-flex flex-column mt-md-4 js-catalog-filter">
       <div class="catalog-filter__section d-md-none catalog-filter__section_buttons-mobile">
         <div class="catalog-filter__section-body">
           <button class="btn btn-sm btn-primary text-uppercase">Применить</button>
@@ -312,10 +315,36 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
 
     </div>
     <div class="col col-section">
       <div class="catalog-container">
+        <div class="d-flex flex-column flex-md-row flex-md-nowrap mt-6 mt-sm-4 catalog-toolbar">
+  <button class="btn btn-outline-secondary mb-3 d-md-none text-left align-items-center" type="button" uk-toggle="target:#offcanvas-catalog-filter">
+    <span class="icon icon_sm icon_funnel-black icon_black-muted mr-2 text-truncate btn__icon">
+      
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#funnel-black'></use></svg>
+
+    </span>
+    <span>Фильтры</span>
+  </button>
+  <span class="btn btn-outline-secondary text-left d-flex align-items-center">
+    <span class="icon icon_sm icon_sort-black icon_black-muted mr-2 btn__icon">
+      
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#sort-black'></use></svg>
+
+    </span>
+    <span class="text-muted mr-2">Сортировать</span>
+    <span>по популярности</span>
+    <span class="icon icon_sm icon_triangle ml-auto btn__icon"></span>
+  </span>
+</div>
+
         <div class="catalog-message-box border text-center mt-4">
           <h4>Товаров не найдено</h4>
           <p>Попробуйте изменить условия поиска</p>
