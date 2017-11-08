@@ -67,6 +67,29 @@
     & svg {
       color: $black;
     }
+
+    &.icon_chevron-left svg {
+      stroke: $black;
+    }
+
+    &.icon_chevron-right svg {
+      stroke: $black;
+    }
+  }
+
+  &_white {
+    &,
+    & svg {
+      color: $white;
+    }
+
+    &.icon_chevron-left svg {
+      stroke: $white;
+    }
+
+    &.icon_chevron-right svg {
+      stroke: $white;
+    }
   }
 
   &_black-muted {
@@ -111,7 +134,33 @@
     }
   }
 
-  &_triangle {
+  &_lg {
+    &,
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &.icon_circle {
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      &.icon_vk svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      &.icon_facebook svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &_triangle,
+  &_triangle-down {
     &::before {
       content: '';
       position: absolute;
@@ -120,9 +169,46 @@
       transform: translate(-50%, -50%);
       width: 0;
       height: 0;
-      border-style: solid;
+      border-style: solid;      
+    }   
+  }
+
+  &_triangle {
+    &::before {
       border-width: 0 4px 4px 4px;
       border-color: transparent transparent theme-color("gray-dark") transparent;
+    }
+
+    &.icon_primary {
+      &::before {
+        border-color: transparent transparent theme-color("primary") transparent;
+      }
+    }
+  }
+
+  &_triangle-down {
+    &::before {
+      border-width: 4px 4px 0 4px;
+      border-color: theme-color("gray-dark") transparent transparent transparent;
+    }
+
+    &.icon_primary {
+      &::before {
+        border-color: theme-color("primary") transparent transparent transparent;
+      }
+    }
+  }
+
+  &_circle {
+    border: 1px solid theme-color("secondary");
+    border-radius: 100px;
+
+    &:hover {
+      border-color: $gray-500;
+
+      .icon_black-muted {
+        opacity: .7;
+      }
     }
   }
 }

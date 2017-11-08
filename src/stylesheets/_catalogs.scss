@@ -52,14 +52,20 @@
   max-width: 100%;
   border: 1px solid transparent;
   transition: $transition-base;
+  overflow: hidden;
 
   @include media-breakpoint-down(xs) {
     padding-top: map-get($spacers, 3);
     padding-bottom: map-get($spacers, 3);
   }
 
+  &_border,
   &:hover {
     border-color: $border-color;
+  }
+
+  &_border:hover {
+    border-color: $gray-400;
   }
 
   &__image-wrap {
@@ -109,6 +115,25 @@
 
   &-data {
     display: none;
+  }
+
+  &_small {
+    .catalog-card__image-wrap {
+      width: 100px;
+      height: 100px;
+      flex-basis: 100px;
+      min-width: 100px;
+      margin-right: 20px;
+
+      @include media-breakpoint-down(sm) {
+        width: 140px;
+        height: 140px;
+        flex-basis: 140px;
+        min-width: 140px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
   }
 }
 

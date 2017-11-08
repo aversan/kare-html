@@ -1,6 +1,7 @@
 .btn {
   overflow: hidden;
   max-width: 100%;
+  cursor: pointer;
 
   &.disabled,
   &:disabled {
@@ -10,7 +11,7 @@
   &.text-uppercase {
     font-weight: 500;
 
-    &:not(.btn-xs) {
+    &:not(.btn-sm) {
       font-size: .8125rem;
       line-height: 1.75;
     }
@@ -24,6 +25,41 @@
     &:last-child {
       margin-right: -.25rem;
     }
+  }
+
+  &_icon {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    .btn__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &_higher {
+    padding: 0.75rem 1.5rem;
+
+    &.btn_icon {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &_circle-fill {
+    border-radius: 100px;
+    background-color: $gray-400;
   }
 }
 
@@ -72,4 +108,12 @@
 
 .btn-width-medium {
   min-width: 180px;
+}
+
+.btn-xs {
+  @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $input-btn-line-height-xs, $btn-border-radius); 
+
+  &.text-uppercase {
+    font-weight: normal;
+  }
 }

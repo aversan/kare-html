@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="basket-black" viewBox="0 0 24 24">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow-black">
+  <path d="M0 0h100L50 50"/>
+</symbol><symbol id="basket-black" viewBox="0 0 24 24">
   <g fill="none" fill-rule="evenodd">
     <path d="M0 0h24v24H0z"/>
     <path stroke="#000" stroke-width="1.4" d="M8.364 9.42V5.225C8.364 3.445 9.992 2 12 2s3.636 1.444 3.636 3.226V9.42m.728-1.936H20V22H4V7.484h12.364z"/>
@@ -8,15 +10,13 @@
         <path d="M0 0h16v16H0z"/>
         <path stroke="#000" d="M4.095 5.905l3.81 3.81 3.81-3.81"/>
     </g>
-</symbol><symbol id="chevron-left-black" viewBox="0 0 24 24">
+</symbol><symbol id="chevron-left" viewBox="0 0 24 24">
     <g fill="none" fill-rule="evenodd">
-        <path d="M0 0h24v24H0z"/>
-        <path stroke="#000" stroke-width="1.5" d="M17 2L7 12l10 10"/>
+        <path stroke-width="1.5" d="M17 2L7 12l10 10"/>
     </g>
-</symbol><symbol id="chevron-right-black" viewBox="0 0 24 24">
+</symbol><symbol id="chevron-right" viewBox="0 0 24 24">
     <g fill="none" fill-rule="evenodd">
-        <path d="M0 0h24v24H0z"/>
-        <path stroke="#000" stroke-width="1.5" d="M7 2l10 10L7 22"/>
+        <path stroke-width="1.5" d="M7 2l10 10L7 22"/>
     </g>
 </symbol><symbol id="chevron-up-black" viewBox="0 0 16 16">
     <g fill="none" fill-rule="evenodd">
@@ -27,6 +27,11 @@
     <g fill="none" fill-rule="evenodd">
         <path d="M0 0h16v16H0z"/>
         <path stroke="#000" stroke-width="1.3" d="M8 8L3 3.037 8 8l-4.962 5L8 8zm0 0l5 4.962L8 8l4.962-5L8 8z"/>
+    </g>
+</symbol><symbol id="download-black" viewBox="0 0 32 32">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h32v32H0z"/>
+        <path stroke="#000" stroke-width="1.5" d="M20.065 24.258h6.322c2.062 0 3.613-1.618 3.613-3.613 0-1.995-1.551-3.613-3.613-3.613 0-4.988-4.3-9.032-9.454-9.032-4.561 0-8.7 3.04-9.514 7.226h-.752C4.089 15.226 2 17.248 2 19.742s1.939 4.516 4.516 4.516h13.549m-.452-7.426L16 20.444l-3.613-3.612M16 20.444v-9.032"/>
     </g>
 </symbol><symbol id="facebook" viewBox="0 0 11.4237 22.9997">
   <title>
@@ -52,6 +57,11 @@
   <g fill="none" fill-rule="evenodd">
     <path d="M0 0h24v24H0z"/>
     <path stroke="#000" stroke-width="1.5" d="M2 8.333C2 15 12 21 12 21s10-6 10-12.667C22 5.573 20.065 3 17.16 3 14.49 3 12 4.905 12 7.667 12 4.905 9.51 3 6.84 3 3.934 3 2 5.572 2 8.333z"/>
+  </g>
+</symbol><symbol id="location-black" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0h24v24H0z"/>
+    <path stroke="#000" stroke-width="1.5" d="M8.806 13.71H6.194L3 19.516h18l-3.194-5.806h-2.612M12 9.645a1.16 1.16 0 1 0 0-2.322 1.16 1.16 0 0 0 0 2.322zm3.774-.574C15.764 6.823 14.084 5 12 5 9.915 5 8.226 6.822 8.226 9.07c0 2.91 3.768 7.543 3.768 7.543s3.793-4.632 3.78-7.542z"/>
   </g>
 </symbol><symbol id="logo" viewBox="0 0 90.56 16">
   <g data-name="&#x421;&#x43B;&#x43E;&#x439; 2">
@@ -87,4 +97,9 @@
     vk
   </title>
   <path d="M19.484 8.276A31.08 31.08 0 0 1 21.7 10.54a6.572 6.572 0 0 1 .796 1.165.836.836 0 0 1-.502 1.298L18.696 13a2.526 2.526 0 0 1-2.1-.865c-.456-.473-.88-.976-1.318-1.464a3.143 3.143 0 0 0-.594-.535.684.684 0 0 0-1.098.27 3.568 3.568 0 0 0-.347 1.564.88.88 0 0 1-1.05 1.03 8.325 8.325 0 0 1-4.72-1.03 10.494 10.494 0 0 1-3.176-3.02 40.86 40.86 0 0 1-4.18-7.567C-.15.786.044.466.69.455 1.768.433 2.844.435 3.92.453a.95.95 0 0 1 .896.68 20.45 20.45 0 0 0 2.19 4.12 3.5 3.5 0 0 0 .825.924.5.5 0 0 0 .855-.255 2.895 2.895 0 0 0 .19-.864 13.066 13.066 0 0 0-.053-3.03A1.255 1.255 0 0 0 7.764.875c-.316-.06-.27-.18-.116-.362A1.18 1.18 0 0 1 8.658 0h3.73a.9.9 0 0 1 .796.986l.003 4.206a1.236 1.236 0 0 0 .526 1.075.73.73 0 0 0 .745-.37 13.072 13.072 0 0 0 2.098-3.278c.253-.518.47-1.056.68-1.593A.8.8 0 0 1 18.08.44l3.586.004a1.896 1.896 0 0 1 .317.02.632.632 0 0 1 .584.968 9.14 9.14 0 0 1-1.426 2.513c-.598.84-1.238 1.653-1.83 2.5a1.15 1.15 0 0 0 .175 1.83z"/>
+</symbol><symbol id="wallet-black" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0h24v24H0z"/>
+    <path stroke="#000" stroke-width="1.2" d="M15.484 13.42a.87.87 0 1 0 0-1.743.87.87 0 0 0 0 1.742zm4.935 1.74v3.195H3V6.742h17.42v3.193M4.45 5h13.936v1.742M4.452 5C3.65 5 3 5.65 3 6.452m12.23 3.483a2.613 2.613 0 1 0 0 5.226H21V9.936h-5.77z"/>
+  </g>
 </symbol></svg>

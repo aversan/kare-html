@@ -63,15 +63,19 @@
     "webpack-hot-middleware": "2.18.2"
   },
   "devDependencies": {
+    "autosize": "4.0.0",
     "bootstrap": "4.0.0-beta",
     "chai": "3.5.0",
-    "exports-loader": "^0.6.4",
+    "exports-loader": "0.6.4",
     "gulp": "3.9.1",
-    "jquery": "^3.2.1",
+    "jquery": "3.2.1",
     "mocha": "3.2.0",
+    "popper": "1.0.0",
     "svg-loader": "0.0.2",
-    "svgxuse": "^1.2.6",
-    "uikit": "^3.0.0-beta.32"
+    "svgxuse": "1.2.6",
+    "swiper": "^4.0.5",
+    "tether-drop": "1.4.2",
+    "uikit": "3.0.0-beta.32"
   },
   "author": "aversanio@gmail.com"
 }

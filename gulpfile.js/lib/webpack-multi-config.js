@@ -41,8 +41,12 @@ module.exports = function (env) {
         $: 'jquery',
         jquery: 'jquery',
         'window.jQuery': 'jquery',
+        'window.Tether': 'tether',
         Util: 'exports-loader?Util!bootstrap/js/dist/util',
-        Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse'
+        Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
+        Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
+        Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
+        Popover: 'exports-loader?Popover!bootstrap/js/dist/popover'
       })
     ],
     resolve: {

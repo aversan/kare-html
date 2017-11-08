@@ -54,8 +54,16 @@
 @import 'node_modules/uikit/src/scss/variables';
 @import 'node_modules/uikit/src/scss/components/offcanvas';
 
+// swiper
+
+@import 'node_modules/swiper/dist/css/swiper';
+
+// old
+
 @import 'old-style';
 @import 'old-custom';
+
+// elements
 
 @import 'fonts';
 @import 'common';
@@ -87,7 +95,11 @@
 @import 'catalog';
 @import 'catalog-section';
 @import 'catalog-page';
-@import 'catalog-detail-page';
+@import 'products';
+@import 'reviews';
+@import 'download-file';
+@import 'options';
+// @import 'catalog-detail-page';
 
 // new-pages styles
 @import 'new-base';
