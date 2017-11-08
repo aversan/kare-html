@@ -66,6 +66,7 @@
     "autosize": "4.0.0",
     "bootstrap": "4.0.0-beta",
     "chai": "3.5.0",
+    "dotdotdot": "^1.7.0",
     "exports-loader": "0.6.4",
     "gulp": "3.9.1",
     "jquery": "3.2.1",
