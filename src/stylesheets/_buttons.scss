@@ -117,3 +117,11 @@
     font-weight: normal;
   }
 }
+
+.btn-checkbox {
+  &__input {
+    &:checked ~ .btn__icon.icon_triangle {
+      transform: rotate(180deg);
+    }
+  }
+}
