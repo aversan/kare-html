@@ -91,16 +91,20 @@ module.exports = function (env) {
       webpackConfig.plugins.push(new webpackManifest(PATH_CONFIG.javascripts.dest, PATH_CONFIG.dest))
     }
 
-    const uglifyConfig = TASK_CONFIG.javascripts.production.uglifyJsPlugin
+    // const uglifyConfig = TASK_CONFIG.javascripts.production.uglifyJsPlugin
+    const babiliConfig = TASK_CONFIG.javascripts.production.babiliJsPlugin
     webpackConfig.devtool = TASK_CONFIG.javascripts.production.devtool
 
     if(webpackConfig.devtool) {
-      uglifyConfig.sourceMap = true
+      // uglifyConfig.sourceMap = true
+      babiliConfig.sourceMap = true
     }
 
+    const BabiliPlugin = require("babili-webpack-plugin");
     webpackConfig.plugins.push(
       new webpack.DefinePlugin(TASK_CONFIG.javascripts.production.definePlugin),
-      new webpack.optimize.UglifyJsPlugin(uglifyConfig),
+      // new webpack.optimize.UglifyJsPlugin(uglifyConfig),
+      new BabiliPlugin(babiliConfig),
       new webpack.NoEmitOnErrorsPlugin()
     )
   }

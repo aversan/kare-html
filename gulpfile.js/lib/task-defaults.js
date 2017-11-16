@@ -29,12 +29,14 @@ module.exports = {
       }
     ],
     babel: {
-      presets: [["es2015", { "modules": false }], 'stage-1']
+      presets: ["es2017", "es2016", ["es2015", { "modules": false }], 'stage-1']
+      //presets: [["es2015", { "modules": false }], 'stage-1']
     },
     development: {},
     production: {
       devtool: false,
-      uglifyJsPlugin: {},
+      // uglifyJsPlugin: {},
+      babiliJsPlugin: {},
       definePlugin: {
         'process.env': {
           'NODE_ENV': JSON.stringify('production')

@@ -67,6 +67,6 @@ module.exports = {
   },
 
   production: {
-    rev: true
+    rev: false
   }
 }
