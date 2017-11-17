@@ -160,7 +160,8 @@
     font-weight: 700;
     font-size: 13px;
     color: theme-color("gray");
-    font-family: 'Geometria-Bold', Arial, sans-serif;
+    font-family: 'Geometria', Arial, sans-serif;
+    font-weight: 700;
   }
 }
 
@@ -180,7 +181,8 @@
   line-height: 70px;
   padding: 0 0 0 30px;
   margin-left: 40px;
-  font-family: 'Geometria-Bold', Arial, sans-serif;
+  font-family: 'Geometria', Arial, sans-serif;
+  font-weight: 700;
   position: relative;
 
   &:before {
@@ -246,22 +248,24 @@ button.header__top-ctrl-btn:hover {
   font-weight: 700;
   font-size: 13px;
   color: theme-color("gray");
-  font-family: 'Geometria-Bold', Arial, sans-serif;
+  font-family: 'Geometria', Arial, sans-serif;
+  font-weight: 700;
 
   a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
     color: theme-color("gray");
-    font-family: 'Geometria-Bold', Arial, sans-serif;
+    font-family: 'Geometria', Arial, sans-serif;
+    font-weight: 700;
   }
 
   button {
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 13px;
     color: theme-color("gray");
-    font-family: 'Geometria-Bold', Arial, sans-serif;
+    font-family: 'Geometria', Arial, sans-serif;
+    font-weight: 700;
     background: transparent;
     box-shadow: none;
     border: none;
@@ -378,8 +382,8 @@ button.header__top-ctrl-btn:hover {
 .main-interior__title {
   color: $white;
   font-size: 55px;
+  font-family: 'Geometria', Arial, sans-serif;
   font-weight: 700;
-  font-family: 'Geometria-Bold', Arial, sans-serif;
   margin-bottom: 10px;
   display: block;
   line-height: 1;
@@ -391,6 +395,7 @@ button.header__top-ctrl-btn:hover {
   margin-bottom: 25px;
   font-size: 20px;
   font-family: 'Geometria', Arial, sans-serif;
+  font-weight: 700;
   color: $white;
   position: relative;
   z-index: 2;
@@ -468,9 +473,9 @@ button.header__top-ctrl-btn:hover {
 }
 
 .main-interior__products-title {
-  font-family: 'Geometria-Bold', Arial, sans-serif;
-  color: theme-color("gray-dark");
+  font-family: 'Geometria', Arial, sans-serif;
   font-weight: 700;
+  color: theme-color("gray-dark");
   font-size: 17px;
   position: absolute;
   text-transform: uppercase;
@@ -527,9 +532,9 @@ button.header__top-ctrl-btn:hover {
 }
 
 .products-slider__price {
-  font-family: 'Geometria-Bold', Arial, sans-serif;
-  color: theme-color("gray-dark");
+  font-family: 'Geometria', Arial, sans-serif;
   font-weight: 700;
+  color: theme-color("gray-dark");
   font-size: 30px;
 }
 
@@ -691,7 +696,7 @@ a.butn--light {
 .main-stock__title {
   text-align: center;
   color: theme-color("gray-dark");
-  font-family: 'Geometria-Bold', Arial, sans-serif;
+  font-family: 'Geometria', Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 45px;
@@ -749,7 +754,8 @@ a.butn--light {
 .header__catalog-btn {
   display: none;
   color: $white;
-  font-family: 'Geometria-Bold', Arial, sans-serif;
+  font-family: 'Geometria', Arial, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 13px;
   width: 160px;
@@ -774,9 +780,9 @@ a.butn--light {
   position: absolute;
   width: 47px;
   height: 35px;
-  font-weight: 700;
   font-size: 17px;
-  font-family: 'Geometria-Bold', Arial, sans-serif;
+  font-family: 'Geometria', Arial, sans-serif;
+  font-weight: 700;
   line-height: 37px;
   text-align: center;
   top: 20px;
@@ -1108,7 +1114,8 @@ a.butn--light {
   z-index: 100;
 
   * {
-    font-family: 'Geometria-Bold', Arial, sans-serif;
+    font-family: 'Geometria', Arial, sans-serif;
+    font-weight: 700;
   }
 }
 
@@ -1196,10 +1203,11 @@ a.butn--light {
   left: 0;
   width: 100%;
   background-color: theme-color("primary");
+}
 
-  * {
-    font-family: 'Geometria-Bold', Arial, sans-serif;
-  }
+.menu-catalog * {
+  font-family: 'Geometria', Arial, sans-serif;
+  font-weight: 700;
 }
 
 .menu-catalog__button {
@@ -1279,6 +1287,10 @@ a.butn--light {
   color: $white;
   padding: 6px 16px;
   line-height: 16px;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .menu-catalog_button {
@@ -1452,7 +1464,8 @@ a.butn--light {
     }
 
     a {
-      font-family: 'Geometria-Bold', Arial, sans-serif;
+      font-family: 'Geometria', Arial, sans-serif;
+      font-weight: 700;
       font-size: 13px;
       text-transform: uppercase;
       text-decoration: none;
@@ -1588,7 +1601,8 @@ a.butn--light {
     span.mobile-hide {
       display: inline;
       font-size: 13px;
-      font-family: 'Geometria-Bold', Arial, sans-serif;
+      font-family: 'Geometria', Arial, sans-serif;
+      font-weight: 700;
     }
   }
 
@@ -1605,7 +1619,8 @@ a.butn--light {
 
   .header__top-ctrl-btn {
     font-size: 13px;
-    font-family: 'Geometria-Bold', Arial, sans-serif;
+    font-family: 'Geometria', Arial, sans-serif;
+    font-weight: 700;
   }
 
   .menu-top__list {
