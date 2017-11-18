@@ -23,7 +23,7 @@ module.exports = {
     serveStatic: ['public'],
     rewriteRules: [
       {
-        match: new RegExp(/local\/templates\/kare_redisign\/css\/app\.css\?1510842070448124/),
+        match: new RegExp(/local\/templates\/kare_redisign\/css\/app\.css\?1510949732513448/),
         fn() {
           return 'stylesheets/app.css';
         },
