@@ -16,8 +16,8 @@ export default class ProductDetailSlider {
 
       mainSwiper = new Swiper($swiperContainer, {
         navigation: {
-          nextEl: $prev,
-          prevEl: $next,
+          prevEl: $prev,
+          nextEl: $next,
         },
         slidesPerView: 1,
         centeredSlides: true,

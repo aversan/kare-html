@@ -60,8 +60,13 @@
 
 // old
 
+@import 'slick';
 @import 'old-style';
 @import 'old-custom';
+@import 'jquery.fancybox';
+@import 'jquery.mCustomScrollbar';
+@import 'customized-selectize';
+@import 'custom';
 
 // elements
 
@@ -112,8 +117,3 @@
 @import 'new-all';
 @import 'new-print';
 @import 'new-main-page';
-@import 'jquery.fancybox';
-@import 'jquery.mCustomScrollbar';
-@import 'customized-selectize';
-@import 'slick';
-@import 'custom';

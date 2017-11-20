@@ -12,8 +12,8 @@ export default class ProductSlider {
 
       const swiper = new Swiper($swiperContainer, {
         navigation: {
-          nextEl: $prev,
-          prevEl: $next,
+          prevEl: $prev,
+          nextEl: $next,
         },
         slidesPerView: 'auto',
         spaceBetween: 0,

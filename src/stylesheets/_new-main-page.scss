@@ -1503,6 +1503,10 @@ a.butn--light {
     justify-content: center;
     width: 148px;
     cursor: pointer;
+
+    a {
+        color: $white;
+    }
 }
 
 .menu-catalog__button:before {
@@ -1586,6 +1590,10 @@ a.butn--light {
     color: #fff;
     padding: 6px 16px;
     line-height: 16px;
+}
+
+.menu-catalog__dropdown-link:hover {
+    color:$white;
 }
 
 .menu-catalog_button {

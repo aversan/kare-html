@@ -89,16 +89,16 @@
   }
 
   &__name {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
+    font-size: .9375rem;
+    line-height: 1.5rem; // 1.6
     max-width: 100%;
     overflow: hidden;
-    min-height: 3rem;
+    max-height: 4.5rem;
 
     @include media-breakpoint-down(xs) {
       font-size: .8125rem;
-      line-height: 1.54;
-      min-height: 5rem;
+      line-height: 1.25125rem; // 1.54
+      max-height: 3.75375rem;
     }
   }
 
@@ -111,6 +111,11 @@
       right: 0;
       bottom: 0;
     }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 100%;
   }
 
   &-data {
@@ -133,6 +138,11 @@
         margin-right: auto;
         margin-left: auto;
       }
+    }
+
+    .catalog-card__content {
+      flex-grow: 1;
+      max-width: 100%;
     }
   }
 }

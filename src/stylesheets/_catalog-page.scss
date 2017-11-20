@@ -383,13 +383,13 @@
 //  transform: rotate(-180deg);
 //}
 
-.main-catalog__description {
-  font-family: "Ubuntu", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 300;
-  color: $black;
-}
+// .main-catalog__description {
+//   font-family: "Ubuntu", "Arial", sans-serif;
+//   font-size: 15px;
+//   line-height: 25px;
+//   font-weight: 300;
+//   color: $black;
+// }
 
 @media (max-width: 1899px) {
   .main-catalog {
@@ -524,9 +524,9 @@
     margin-right: 0;
   }
 
-  .main-catalog__description {
-    display: none;
-  }
+  // .main-catalog__description {
+  //   display: none;
+  // }
 
   .tabs__list {
     white-space: nowrap;
