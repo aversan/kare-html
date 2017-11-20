@@ -9,6 +9,7 @@ const htmlmin        = require('gulp-htmlmin')
 const path           = require('path')
 const nunjucksRender = require('gulp-nunjucks-render')
 const fs             = require('fs')
+const prettify       = require('gulp-html-prettify');
 
 const htmlTask = function() {
 
@@ -32,6 +33,7 @@ const htmlTask = function() {
     .on('error', handleErrors)
     .pipe(nunjucksRender(TASK_CONFIG.html.nunjucksRender))
     .on('error', handleErrors)
+    .pipe(prettify({ indent_char: ' ', indent_size: 2 }))
     // .pipe(gulpif(global.production, htmlmin(TASK_CONFIG.html.htmlmin)))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream())

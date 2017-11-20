@@ -81,6 +81,7 @@
     "eslint-plugin-react": "^7.4.0",
     "exports-loader": "0.6.4",
     "gulp": "3.9.1",
+    "gulp-html-prettify": "0.0.1",
     "jquery": "3.2.1",
     "mocha": "3.2.0",
     "popper": "1.0.0",
