@@ -13,7 +13,7 @@
 $.fn.jqm=function(o){
 var p={
 overlay: 50,
-overlayClass: 'jqmOverlay',
+overlayClass: 'popup-overlay jqmOverlay',
 closeClass: 'jqmClose',
 trigger: '.jqModal',
 ajax: F,

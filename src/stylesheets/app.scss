@@ -58,6 +58,10 @@
 
 @import 'node_modules/swiper/dist/css/swiper';
 
+// tether
+
+@import 'node_modules/tether/src/css/tether';
+
 // old
 
 @import 'slick';
@@ -105,6 +109,8 @@
 @import 'download-file';
 @import 'options';
 @import 'dotdotdot';
+@import 'popover';
+@import 'popup';
 //@import 'catalog-detail-page';
 
 // new-pages styles
@@ -117,3 +123,4 @@
 @import 'new-all';
 @import 'new-print';
 @import 'new-main-page';
+@import 'drop';

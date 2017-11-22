@@ -31,7 +31,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page-body {
+.page-body,
+.page-body > .uk-offcanvas-content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -106,7 +107,7 @@ html {
   }
 
   &-small {
-    margin-top: map-get($spacers, 5); 
+    margin-top: map-get($spacers, 5);
   }
 }
 
@@ -153,6 +154,14 @@ html {
     position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);  
+    transform: translate(-50%,-50%);
   }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.mr-12px {
+  margin-right: 12px;
 }

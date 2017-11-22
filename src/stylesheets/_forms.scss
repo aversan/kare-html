@@ -3,4 +3,18 @@
   &[readonly] {
     border-color: $input-disabled-border-color;
   }
+
+  &-textarea-medium {
+    height: 7.5rem;
+  }
+
+  &-textarea-large {
+    height: 12.5rem;
+  }
+}
+
+.form-group {
+  &__label {
+    line-height: 1;
+  }
 }

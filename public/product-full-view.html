@@ -97,24 +97,51 @@
                 </div>
                 <div class="product-card__buttons d-flex flex-column flex-sm-row flex-nowrap mt-3">
                   <div class="buttons d-flex flex-nowrap">
-                    <a class="btn btn-primary btn_higher text-uppercase js-to-basket js-to-basket-btn" title="Добавить в корзину" rel="nofollow" href="/ajax/item.php" data-item="23910" data-quantity="1" alt="" onclick="ga('send', 'event', 'Button1', 'Buttonclick1');" data-type="basket">В корзину</a>
-                    <a class="btn btn-primary btn-higher text-uppercase js-in-basket-btn hidden" title="Перейти в корзину" rel="nofollow" href="/basket/" data-item="23910">В корзине</a>
+                    <a class="btn btn-primary btn_higher text-uppercase basket-button basket-button_to-cart js-to-basket js-to-basket-btn" title="Добавить в корзину" rel="nofollow" href="/ajax/item.php" data-item="23910" data-quantity="1" alt="" onclick="ga('send', 'event', 'Button1', 'Buttonclick1');"
+                    data-type="basket">В корзину</a>
+                    <a class="btn btn-primary btn-higher text-uppercase basket-button basket-button_in-cart js-in-basket-btn hidden" title="Перейти в корзину" rel="nofollow" href="/basket/" data-item="23910">В корзине</a>
                   </div>
                   <div class="buttons d-flex flex-nowrap mt-3 mt-sm-0">
-                    <a class="btn btn-outline-secondary btn_higher text-uppercase fast-order" rel="nofollow" href="#" data-item="23910" data-type="fast-order" title="Быстрый заказ" onclick="fastOrderClick(23910, this); return false;">Быстрый заказ</a>
-                    <a class="btn btn-outline-secondary btn_higher text-uppercase btn_icon js-to-basket js-to-wish-btn" href="/ajax/item.php" rel="nofollow" data-item="23910" data-quantity="1" data-type="wish">
+                    <a class="btn btn-outline-secondary btn_higher text-uppercase basket-button fast-order" rel="nofollow" href="#" data-item="23910" data-type="fast-order" title="Быстрый заказ" onclick="fastOrderClick(23910, this); return false;">Быстрый заказ</a>
+                    <a class="btn btn-outline-secondary btn_higher text-uppercase btn_icon basket-button js-to-basket js-to-wish-btn" href="/ajax/item.php" rel="nofollow" data-item="23910" data-quantity="1" data-type="wish">
                       <span class="icon icon_md icon_like-black icon_black-muted btn__icon">
 	        
   
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
 	      </span>
+                      <span class="icon icon_md icon_like-red btn__icon">
+	        
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+	      </span>
                     </a>
                   </div>
                 </div>
+
                 <div class="mt-4">
                   <span class="text-gray">Ближайшая отгрузка</span>
-                  <a class="text-primary" href="">25 сентября <span class="icon icon_sm icon_triangle-down icon_primary"></span></a>
+                  <div class="d-inline-block js-drop" data-theme="drop-theme-arrows drop_shipment" data-open-on="click" data-position="bottom center">
+                    <span class="text-primary drop-target clickable">25 сентября <span class="icon icon_sm icon_triangle-down icon_primary"></span></span>
+                    <div class="drop-content">
+                      <div class="drop-item d-flex flex-column px-4 py-2">
+                        <span><span class="font-weight-bold">Из Москвы</span>  <span class="text-muted text-nowrap">131 шт.</span></span>
+                        <span>25 сентября</span>
+                      </div>
+                      <div class="drop-item d-flex flex-column px-4 py-2">
+                        <span><span class="font-weight-bold">Из Челябинска</span>  <span class="text-muted text-nowrap">49 шт.</span></span>
+                        <span>25 сентября</span>
+                      </div>
+                    </div>
+                    <!--<div class="drop-content">
+          <div class="typo-sm text-muted font-weight-bold px-4">Ожидается поступление</div>
+          <div class="drop-item d-flex flex-column px-4 py-2">
+            <span><span class="font-weight-bold">Из Москвы</span> <span class="text-muted text-nowrap">131 шт.</span></span>
+            <span>25 сентября</span>
+          </div>
+        </div>-->
+                  </div>
                 </div>
                 <div class="divider-small"></div>
                 <div class="product-card__items pb-2">
@@ -316,15 +343,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -371,15 +404,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -426,15 +465,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -481,15 +526,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -536,15 +587,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -715,15 +772,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                          <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                           </a>
                           </span>
                           <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                          <span class="icon icon_md icon_basket-black icon_black-muted">
+                          <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                           </a>
@@ -770,15 +833,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                          <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                           </a>
                           </span>
                           <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                          <span class="icon icon_md icon_basket-black icon_black-muted">
+                          <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                           </a>
@@ -825,15 +894,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                          <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                           </a>
                           </span>
                           <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                          <span class="icon icon_md icon_basket-black icon_black-muted">
+                          <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                           </a>
@@ -880,15 +955,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                          <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                           </a>
                           </span>
                           <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                          <span class="icon icon_md icon_basket-black icon_black-muted">
+                          <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                           </a>
@@ -935,15 +1016,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                          <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                           </a>
                           </span>
                           <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                          <span class="icon icon_md icon_basket-black icon_black-muted">
+                          <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                           </a>
@@ -1023,15 +1110,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                            <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                             </a>
                             </span>
                             <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                            <span class="icon icon_md icon_basket-black icon_black-muted">
+                            <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                             </a>
@@ -1078,15 +1171,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                            <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                             </a>
                             </span>
                             <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                            <span class="icon icon_md icon_basket-black icon_black-muted">
+                            <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                             </a>
@@ -1133,15 +1232,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                            <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                             </a>
                             </span>
                             <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                            <span class="icon icon_md icon_basket-black icon_black-muted">
+                            <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                             </a>
@@ -1188,15 +1293,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                            <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                             </a>
                             </span>
                             <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                            <span class="icon icon_md icon_basket-black icon_black-muted">
+                            <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                             </a>
@@ -1243,15 +1354,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                            <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                             </a>
                             </span>
                             <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                            <span class="icon icon_md icon_basket-black icon_black-muted">
+                            <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                             </a>
@@ -1331,15 +1448,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1386,15 +1509,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1441,15 +1570,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1496,15 +1631,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1551,15 +1692,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1606,15 +1753,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1661,15 +1814,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1716,15 +1875,21 @@
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-black'></use></svg>
 
             </span>
+                        <span class="icon icon_md icon_like-red">
+              
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#like-red'></use></svg>
+
+            </span>
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
           <a title="Перейти в корзину" class="basket-button basket-button_in-cart js-in-basket-btn hidden" rel="nofollow" href="/basket/" data-item="16228">
             <span class="sr-only">В корзине</span>
-                        <span class="icon icon_md icon_basket-black icon_black-muted">
+                        <span class="icon icon_md icon_basket-red">
               
   
-  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-black'></use></svg>
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#basket-red'></use></svg>
 
             </span>
                         </a>
@@ -1964,6 +2129,7 @@
     </footer>
 
   </div>
+
 
   <script type="text/javascript" src="bitrix/js/main/jquery/jquery-1.8.3.min.js?143290390393636"></script>
   <script type="text/javascript" src="bitrix/js/main/ajax.js?144731839935509"></script>

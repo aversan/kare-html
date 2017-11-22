@@ -1786,16 +1786,6 @@ h2.feedback_title {
 }
 
 .popup {
-  display: none;
-  position: absolute;
-  /*top: 100px;*/
-  min-width: 320px;
-  max-width: 520px;
-  left: 50%;
-  border-radius: 5px;
-  -moz-radius: 5px;
-  -webkit-border-radius: 5px;
-  font-size: 12px;
   &.enter_frame, &.register_frame {
     max-width: 420px;
     text-align: left;

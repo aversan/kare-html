@@ -5,6 +5,11 @@
     <path d="M0 0h24v24H0z"/>
     <path stroke="#000" stroke-width="1.4" d="M8.364 9.42V5.225C8.364 3.445 9.992 2 12 2s3.636 1.444 3.636 3.226V9.42m.728-1.936H20V22H4V7.484h12.364z"/>
   </g>
+</symbol><symbol id="basket-red" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h24v24H0z"/>
+        <path stroke="#FF6174" stroke-width="1.4" d="M8.364 9.42V5.225C8.364 3.444 9.992 2 12 2s3.636 1.444 3.636 3.226v4.193m.728-1.935H20V22H4V7.484h12.364z"/>
+    </g>
 </symbol><symbol id="chevron-down-black" viewBox="0 0 16 16">
     <g fill="none" fill-rule="evenodd">
         <path d="M0 0h16v16H0z"/>
@@ -58,6 +63,11 @@
     <path d="M0 0h24v24H0z"/>
     <path stroke="#000" stroke-width="1.5" d="M2 8.333C2 15 12 21 12 21s10-6 10-12.667C22 5.573 20.065 3 17.16 3 14.49 3 12 4.905 12 7.667 12 4.905 9.51 3 6.84 3 3.934 3 2 5.572 2 8.333z"/>
   </g>
+</symbol><symbol id="like-red" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h24v24H0z"/>
+        <path stroke="#FF6174" stroke-width="1.5" d="M2 8.333C2 15 12 21 12 21s10-6 10-12.667C22 5.572 20.065 3 17.161 3 14.49 3 12 4.905 12 7.667 12 4.905 9.511 3 6.839 3 3.935 3 2 5.572 2 8.333z"/>
+    </g>
 </symbol><symbol id="location-black" viewBox="0 0 24 24">
   <g fill="none" fill-rule="evenodd">
     <path d="M0 0h24v24H0z"/>
@@ -82,6 +92,14 @@
         <path d="M0 0h16v16H0z"/>
         <path fill="#000" d="M2 9.056V7.744h8v1.312H2zM2 4.4h12v1.344H2V4.4zm0 8v-1.344h4V12.4H2z"/>
     </g>
+</symbol><symbol id="success-black" viewBox="0 0 48 48">
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0h48v48H0z"/>
+    <g stroke="#000" stroke-width="2" transform="translate(3 3)">
+      <path stroke-linejoin="bevel" d="M8 22l8 8 16-16"/>
+      <circle cx="21" cy="21" r="21"/>
+    </g>
+  </g>
 </symbol><symbol id="up-black" viewBox="0 0 24 24">
     <g fill="none" fill-rule="evenodd">
         <path d="M0 0h24v24H0z"/>

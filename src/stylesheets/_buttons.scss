@@ -111,7 +111,7 @@
 }
 
 .btn-xs {
-  @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $input-btn-line-height-xs, $btn-border-radius); 
+  @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $input-btn-line-height-xs, $btn-border-radius);
 
   &.text-uppercase {
     font-weight: normal;
@@ -122,6 +122,28 @@
   &__input {
     &:checked ~ .btn__icon.icon_triangle {
       transform: rotate(180deg);
+    }
+  }
+}
+
+.basket-button {
+  &.btn-outline-secondary {
+    &.added {
+      border-color: theme-color("primary");
+    }
+  }
+
+  .icon_like-black {
+    & ~ .icon {
+      display: none;
+    }
+  }
+
+  &.added .icon_like-black {
+    display: none;
+
+    & ~ .icon {
+      display: inline-block;
     }
   }
 }
