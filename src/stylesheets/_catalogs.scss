@@ -41,6 +41,18 @@
     overflow: hidden;
     width: 100%;
     max-width: 100%;
+    position: relative;
+
+    &-link {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
   }
 }
 
