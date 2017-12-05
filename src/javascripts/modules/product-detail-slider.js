@@ -19,7 +19,6 @@ export default class ProductDetailSlider {
           prevEl: $prev,
           nextEl: $next,
         },
-        initialSlide: 0,
         loop: true,
         setWrapperSize: true,
         loopAdditionalSlides: 6,
@@ -27,7 +26,7 @@ export default class ProductDetailSlider {
         slidesPerView: 1,
         centeredSlides: true,
         spaceBetween: 24,
-        initialSlide: '2',
+        initialSlide: 0,
         observer: true,
         observeParents: true,
         breakpoints: {
