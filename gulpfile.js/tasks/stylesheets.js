@@ -31,7 +31,7 @@ var sassTask = function () {
     .pipe(sass(TASK_CONFIG.stylesheets.sass))
     .on('error', handleErrors)
     .pipe(autoprefixer(TASK_CONFIG.stylesheets.autoprefixer))
-    .pipe(gulpif(global.production, cssnano(cssnanoConfig)))
+    // .pipe(gulpif(global.production, cssnano(cssnanoConfig)))
     .pipe(gulpif(!global.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream())
