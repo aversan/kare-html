@@ -48,6 +48,12 @@
       cursor: default;
       pointer-events: none;
     }
+
+    .product-detail-slider-disabled & {
+      opacity: 0;
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   &-prev {
@@ -121,6 +127,10 @@
         background-color: rgba($gray-700, 0.15);
         z-index: 1;
       }
+    }
+
+    .product-detail-slider-disabled & {
+      cursor: default;
     }
   }
 }

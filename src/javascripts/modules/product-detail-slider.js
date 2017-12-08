@@ -3,6 +3,12 @@ import Swiper from 'swiper';
 export default class ProductDetailSlider {
   constructor(el) {
     this.el = el;
+
+    if ($(this.el).find('.js-swiper-main').length <= 1) {
+      $(this.el).addClass('product-detail-slider-disabled');
+      return;
+    }
+
     const $main = $(this.el).find('.js-swiper-main');
     const $navigation = $(this.el).find('.js-swiper-navigation');
     let mainSwiper;
