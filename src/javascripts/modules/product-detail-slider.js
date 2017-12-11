@@ -4,7 +4,7 @@ export default class ProductDetailSlider {
   constructor(el) {
     this.el = el;
 
-    if ($(this.el).find('.js-swiper-main').length <= 1) {
+    if ($(this.el).find('.js-swiper-main .swiper-slide').length <= 1) {
       $(this.el).addClass('product-detail-slider-disabled');
       return;
     }
