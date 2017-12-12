@@ -156,7 +156,7 @@
 .product-slider {
   &-container {
     @include media-breakpoint-down(sm) {
-      padding-left: $grid-gutter-width;
+      padding-left: $grid-gutter-width + 1px;
       margin-left: -$grid-gutter-width;
     }
 
