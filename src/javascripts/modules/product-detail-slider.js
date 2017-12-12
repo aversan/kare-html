@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import $ from 'jquery';
 
 export default class ProductDetailSlider {
   constructor(el) {
@@ -25,12 +26,12 @@ export default class ProductDetailSlider {
           prevEl: $prev,
           nextEl: $next,
         },
-        loop: true,
+        loop: false,
         setWrapperSize: true,
-        loopAdditionalSlides: 6,
-        loopedSlides: 6,
+        // loopAdditionalSlides: 6,
+        // loopedSlides: 6,
         slidesPerView: 1,
-        centeredSlides: true,
+        centeredSlides: false,
         spaceBetween: 24,
         initialSlide: 0,
         observer: true,
@@ -46,7 +47,10 @@ export default class ProductDetailSlider {
       });
 
       mainSwiper.on('slideChange', () => {
-        navigationSwiper.slideTo(mainSwiper.activeIndex);
+        const activeIndex = mainSwiper.activeIndex;
+        $(navigationSwiper.slides).removeClass('is-selected');
+        $(navigationSwiper.slides).eq(activeIndex).addClass('is-selected');
+        navigationSwiper.slideTo(activeIndex, 500, false);
       });
     });
 
@@ -56,16 +60,16 @@ export default class ProductDetailSlider {
 
       navigationSwiper = new Swiper($swiperContainer, {
         slidesPerView: 6,
-        centeredSlides: true,
+        centeredSlides: false,
         spaceBetween: 24,
         observer: true,
         observeParents: true,
         slideToClickedSlide: true,
         initialSlide: 0,
-        loop: true,
+        loop: false,
         setWrapperSize: true,
-        loopAdditionalSlides: 6,
-        loopedSlides: 6,
+        // loopAdditionalSlides: 6,
+        // loopedSlides: 6,
         breakpoints: {
           768: {
             slidesPerView: 'auto',
@@ -76,8 +80,12 @@ export default class ProductDetailSlider {
         },
       });
 
-      navigationSwiper.on('slideChange', () => {
-        mainSwiper.slideTo(navigationSwiper.activeIndex);
+      navigationSwiper.on('click', () => {
+        const clickedIndex = navigationSwiper.clickedIndex;
+        navigationSwiper.activeIndex = clickedIndex;
+        $(navigationSwiper.slides).removeClass('is-selected');
+        $(navigationSwiper.clickedSlide).addClass('is-selected');
+        mainSwiper.slideTo(clickedIndex, 500, false);
       });
     });
   }

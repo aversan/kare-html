@@ -22882,10 +22882,10 @@ span.rub .text {
     @media (max-width: 767px) {
       .product-detail-slider-navigation .product-detail-slider-slide.swiper-slide {
         margin-right: 16px; } }
-    .product-detail-slider-navigation .product-detail-slider-slide.swiper-slide-active {
+    .product-detail-slider-navigation .product-detail-slider-slide.swiper-slide.is-selected {
       position: relative;
       cursor: default; }
-      .product-detail-slider-navigation .product-detail-slider-slide.swiper-slide-active::before {
+      .product-detail-slider-navigation .product-detail-slider-slide.swiper-slide.is-selected::before {
         content: '';
         position: absolute;
         left: 0;
