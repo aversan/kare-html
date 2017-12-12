@@ -22907,20 +22907,21 @@ span.rub .text {
   cursor: default;
   pointer-events: none; }
 
-@media (max-width: 767px) {
-  .product-slider-container {
-    padding-left: 21px;
-    margin-left: -20px; } }
-
-.product-slider-container::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 45px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
-  z-index: 2; }
+.product-slider-container {
+  padding-left: 1px; }
+  @media (max-width: 767px) {
+    .product-slider-container {
+      padding-left: 21px;
+      margin-left: -20px; } }
+  .product-slider-container::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+    z-index: 2; }
 
 .product-slider-slide {
   width: 330px;
