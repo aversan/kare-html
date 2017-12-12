@@ -22909,7 +22909,7 @@ span.rub .text {
 
 @media (max-width: 767px) {
   .product-slider-container {
-    padding-left: 20px;
+    padding-left: 21px;
     margin-left: -20px; } }
 
 .product-slider-container::before {
