@@ -22900,24 +22900,27 @@ span.rub .text {
       cursor: default; }
 
 .product-header__buttons .btn + .btn {
-  margin-left: 12px; }
+  margin-left: .75rem; }
 
 .product-header__buttons .btn.swiper-button-disabled {
   opacity: .6;
   cursor: default;
   pointer-events: none; }
 
-.product-slider-container {
-  padding-left: 1px; }
-  .product-slider-container::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 45px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
-    z-index: 2; }
+@media (max-width: 767px) {
+  .product-slider-container {
+    padding-left: 20px;
+    margin-left: -20px; } }
+
+.product-slider-container::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+  z-index: 2; }
 
 .product-slider-slide {
   width: 330px;

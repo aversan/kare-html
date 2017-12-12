@@ -140,7 +140,7 @@
 .product-header {
   &__buttons {
     .btn + .btn {
-      margin-left: 12px;
+      margin-left: .75rem;
     }
 
     .btn {
@@ -155,7 +155,10 @@
 
 .product-slider {
   &-container {
-    padding-left: 1px;
+    @include media-breakpoint-down(sm) {
+      padding-left: $grid-gutter-width;
+      margin-left: -$grid-gutter-width;
+    }
 
     &::before {
       content: '';
