@@ -22864,10 +22864,12 @@ span.rub .text {
       max-width: 320px; } }
 
 .product-detail-slider-main .product-detail-slider-slide.swiper-slide {
-  height: 500px; }
+  height: 500px;
+  width: 500px; }
   @media (max-width: 767px) {
     .product-detail-slider-main .product-detail-slider-slide.swiper-slide {
-      height: 320px; } }
+      height: 320px;
+      width: 320px; } }
 
 .product-detail-slider-navigation {
   margin-top: 40px; }

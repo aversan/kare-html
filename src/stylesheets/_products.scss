@@ -89,9 +89,11 @@
 .product-detail-slider-main {
   .product-detail-slider-slide.swiper-slide {
     height: 500px;
+    width: 500px;
 
     @include media-breakpoint-down(sm) {
       height: 320px;
+      width: 320px;
     }
   }
 }
