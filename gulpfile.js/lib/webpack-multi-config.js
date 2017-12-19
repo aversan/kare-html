@@ -46,6 +46,7 @@ module.exports = function (env) {
         Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
         Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
         Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
+        Button: 'exports-loader?Button!bootstrap/js/dist/button',
         Popover: 'exports-loader?Popover!bootstrap/js/dist/popover'
       })
     ],

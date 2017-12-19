@@ -2,6 +2,7 @@ import 'svgxuse';
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/modal';
 import 'bootstrap/js/dist/util';
+import 'bootstrap/js/dist/button';
 import Drop from 'tether-drop';
 // import Popper from 'popper';
 import autosize from 'autosize';

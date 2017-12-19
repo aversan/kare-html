@@ -157,6 +157,21 @@
       max-width: 100%;
     }
   }
+
+  &_xsmall {
+    .catalog-card__image-wrap {
+      width: 60px;
+      height: 60px;
+      flex-basis: 60px;
+      min-width: 60px;
+      margin-right: 20px;
+    }
+
+    .catalog-card__content {
+      flex-grow: 1;
+      max-width: 100%;
+    }
+  }
 }
 
 .catalog-list {

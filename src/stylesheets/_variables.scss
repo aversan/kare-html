@@ -352,7 +352,7 @@ $input-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 // $input-group-addon-color:        $input-color !default;
 // $input-group-addon-bg:           $gray-200 !default;
 // $input-group-addon-border-color: $input-border-color !default;
-// $input-group-btn-border-color:   $input-border-color !default;
+$input-group-btn-border-color: $input-border-color;
 
 $custom-control-gutter: 1.5rem;
 $custom-control-spacer-y: .25rem;

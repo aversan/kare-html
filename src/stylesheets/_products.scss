@@ -172,6 +172,20 @@
       background-image: linear-gradient(to right, rgba($white, 0), $white);
       z-index: 2;
     }
+
+    &-vertical {
+      padding-left: 0;
+      padding-top: 1px;
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &-slide {
@@ -195,6 +209,26 @@
       width: calc(100% + 1px);
       max-width: calc(100% + 1px);
       min-height: 100%;
+    }
+
+    .product-slider-container-vertical & {
+      width: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+
+      .catalog-card {
+        margin-left: 0;
+        margin-top: -1px;
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+      }
     }
   }
 }
