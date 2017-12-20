@@ -13,6 +13,7 @@
   <body class="page-body">
     <div class="uk-offcanvas-content">
       <div class="page-wrapper" id="page-wrapper">
+        {% include "shared/page-header.html" %}
         {% block content %}{% endblock %}
       </div>
       {% include "shared/page-footer.html" %}

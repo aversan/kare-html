@@ -159,7 +159,9 @@
 
     @include media-breakpoint-down(sm) {
       padding-left: $grid-gutter-width + 1px;
+      padding-right: $grid-gutter-width;
       margin-left: -$grid-gutter-width;
+      margin-right: -$grid-gutter-width;
     }
 
     &::before {
@@ -171,6 +173,10 @@
       width: 45px;
       background-image: linear-gradient(to right, rgba($white, 0), $white);
       z-index: 2;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
     }
 
     &-vertical {
@@ -179,7 +185,9 @@
 
       @include media-breakpoint-down(sm) {
         padding-left: 0;
+        padding-right: 0;
         margin-left: 0;
+        margin-right: 0;
       }
 
       &::before {
