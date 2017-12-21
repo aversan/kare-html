@@ -107,7 +107,7 @@
     overflow: hidden;
     max-height: 4.5rem;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       font-size: .8125rem;
       line-height: 1.25125rem; // 1.54
       max-height: 3.75375rem;

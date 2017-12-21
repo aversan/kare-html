@@ -253,8 +253,15 @@
     margin-left: -$grid-gutter-width;
     margin-right: -$grid-gutter-width;
   }
+
   &::before {
     display: none;
+  }
+
+  .product-slider-slide {
+    width: 200px;
+    flex-basis: 200px;
+    max-width: 200px;
   }
 }
 
