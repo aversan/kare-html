@@ -241,6 +241,23 @@
   }
 }
 
+.product-slider-container_popup {
+  padding-left: 32px + 1px;
+  padding-right: 32px;
+  margin-left: -32px;
+  margin-right: -32px;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: $grid-gutter-width + 1px;
+    padding-right: $grid-gutter-width;
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+  }
+  &::before {
+    display: none;
+  }
+}
+
 .product-max-width {
   max-width: 482px;
 }

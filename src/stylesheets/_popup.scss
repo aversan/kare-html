@@ -23,10 +23,10 @@ popup-overlay,
 }
 
 .popup-width-added {
-  margin-left: -383px !important;
+  margin-left: -383px;
 
   @include media-breakpoint-down(sm) {
-    margin-left: -160px !important;
+    margin-left: -160px;
   }
 
   .popup-wrap {
