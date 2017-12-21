@@ -1,0 +1,21 @@
+.cart-added-items {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    &.icon_lg {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+}
+
+.cart-added-button {
+  @include media-breakpoint-down(sm) {
+    width: 200px;
+  }
+}

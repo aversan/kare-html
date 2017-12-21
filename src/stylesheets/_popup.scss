@@ -14,9 +14,27 @@ popup-overlay,
   padding: 2rem;
   background: $white;
   box-shadow: 0 2px 20px 0 rgba(20, 20, 20, 0.25);
+}
 
-  .popup-width-small & {
+.popup-width-small {
+  .popup-wrap {
     width: 20rem;
+  }
+}
+
+.popup-width-added {
+  margin-left: -383px !important;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -160px !important;
+  }
+
+  .popup-wrap {
+    width: 767px;
+
+    @include media-breakpoint-down(sm) {
+      width: 320px;
+    }
   }
 }
 
@@ -33,6 +51,15 @@ popup-overlay,
 
   &:hover .icon_black-muted {
     opacity: .6;
+  }
+}
+
+.popup-added {
+  .popup-title {
+    @include media-breakpoint-down(sm) {
+      font-size: $h4-font-size;
+      line-height: $h4-line-height;
+    }
   }
 }
 

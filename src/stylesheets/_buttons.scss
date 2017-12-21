@@ -88,17 +88,18 @@
 
 .btn-outline-secondary {
   color: $gray-700;
+  background-color: $white;
 
   &:hover,
   &:focus {
     border-color: $gray-500;
-    background-color: transparent;
+    background-color: $white;
     color: $gray-700;
   }
 
   &.disabled,
   &:disabled {
-    background-color: transparent;
+    background-color: $white;
     border-color: theme-color("primary");
     color: theme-color("primary");
   }
@@ -125,6 +126,10 @@
   &:focus {
     color: $gray-600;
   }
+}
+
+.btn-width-xsmall {
+  min-width: 100px;
 }
 
 .btn-width-small {

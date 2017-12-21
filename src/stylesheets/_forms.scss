@@ -11,6 +11,10 @@
   &-textarea-large {
     height: 12.5rem;
   }
+
+  &.is-error {
+    border-color: theme-color('primary');
+  }
 }
 
 .form-group {

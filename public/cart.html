@@ -688,7 +688,7 @@
           <div class="row">
             <div class="col-12 col-lg-8 order-lg-1">
               <div class="card-items pb-2">
-                <article class="catalog-card catalog-card_cart catalog-card_border d-flex flex-row flex-nowrap mb-3">
+                <article class="catalog-card catalog-card_cart catalog-card_border d-flex flex-row flex-nowrap mb-3" data-module="cart-item">
                   <span class="catalog-card__image-wrap d-block">
     <img class="catalog-card__image" src="http://via.placeholder.com/100x100" alt="" title="" />
   </span>
@@ -700,11 +700,11 @@
                     <div class="d-flex align-items-center d-sm-block mb-3 mb-sm-0">
                       <div class="input-group input-group-sm catalog-card__counter mx-sm-3">
                         <span class="input-group-btn">
-          <button type="button" class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="minus" data-field="quant[1]">–</button>
+          <button class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="minus" data-field="quant[1]">–</button>
         </span>
                         <input type="text" name="quant[1]" class="form-control input-number" value="10" min="1" max="100">
                         <span class="input-group-btn">
-          <button type="button" class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="plus" data-field="quant[1]">+</button>
+          <button class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="plus" data-field="quant[1]">+</button>
         </span>
                       </div>
                       <div class="catalog-button-group d-flex align-items-center ml-auto pl-3 pl-sm-0">
@@ -725,7 +725,7 @@
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
-            <a class="icon icon_md icon_close-circle-black icon_black-muted" href="/basket/?action=delete&amp;id=46740">
+            <a class="icon icon_md icon_close-circle-black icon_black-muted js-del" href="/basket/?action=delete&amp;id=46740" title="Удалить">
               
   
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#close-circle-black'></use></svg>
@@ -741,9 +741,13 @@
                       </div>
                     </div>
                   </div>
+                  <div class="catalog-card__area d-flex flex-column align-items-center justify-content-center fade js-area">
+                    <h5 class="mb-2 pb-1">Товар удален из корзины</h5>
+                    <a class="btn btn-outline-secondary btn-sm text-uppercase btn-width-xsmall js-revert" href="#">Вернуть</a>
+                  </div>
                 </article>
 
-                <article class="catalog-card catalog-card_cart catalog-card_border d-flex flex-row flex-nowrap mb-3">
+                <article class="catalog-card catalog-card_cart catalog-card_border d-flex flex-row flex-nowrap mb-3" data-module="cart-item">
                   <span class="catalog-card__image-wrap d-block">
     <img class="catalog-card__image" src="http://via.placeholder.com/100x100" alt="" title="" />
   </span>
@@ -755,11 +759,11 @@
                     <div class="d-flex align-items-center d-sm-block mb-3 mb-sm-0">
                       <div class="input-group input-group-sm catalog-card__counter mx-sm-3">
                         <span class="input-group-btn">
-          <button type="button" class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="minus" data-field="quant[1]">–</button>
+          <button class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="minus" data-field="quant[1]">–</button>
         </span>
                         <input type="text" name="quant[1]" class="form-control input-number" value="10" min="1" max="100">
                         <span class="input-group-btn">
-          <button type="button" class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="plus" data-field="quant[1]">+</button>
+          <button class="btn btn-outline-secondary btn-number" data-module="btn-number" data-type="plus" data-field="quant[1]">+</button>
         </span>
                       </div>
                       <div class="catalog-button-group d-flex align-items-center ml-auto pl-3 pl-sm-0">
@@ -780,7 +784,7 @@
                         </a>
                         </span>
                         <span class="catalog-button-group__item ml-3">
-            <a class="icon icon_md icon_close-circle-black icon_black-muted" href="/basket/?action=delete&amp;id=46740">
+            <a class="icon icon_md icon_close-circle-black icon_black-muted js-del" href="/basket/?action=delete&amp;id=46740" title="Удалить">
               
   
   <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#close-circle-black'></use></svg>
@@ -795,23 +799,28 @@
                         <div class="price price_old h5 mb-0 text-truncate text-muted">49 990 р.</div>
                       </div>
                     </div>
+                  </div>
+                  <div class="catalog-card__area d-flex flex-column align-items-center justify-content-center fade js-area">
+                    <h5 class="mb-2 pb-1">Товар удален из корзины</h5>
+                    <a class="btn btn-outline-secondary btn-sm text-uppercase btn-width-xsmall js-revert" href="#">Вернуть</a>
                   </div>
                 </article>
 
               </div>
             </div>
             <div class="col-12 col-sm-6 col-auto order-lg-3">
-              <h5 class="text-uppercase mb-2">У меня есть промокод</h5>
+              <h5 class="text-uppercase mb-2 pb-1">У меня есть промокод</h5>
               <div class="input-group input-group-max-width-small">
                 <input class="form-control" type="text" name="" value="" id="" placeholder="Промокод">
                 <span class="input-group-btn">
-            <button class="btn btn-outline-secondary btn-sm btn_higher text-uppercase">Активировать</button>
-          </span>
+    <button class="btn btn-outline-secondary btn-sm btn_higher text-uppercase">Активировать</button>
+  </span>
               </div>
+
             </div>
             <div class="col-12 col-sm-6 col-lg-3 order-lg-2">
-              <div class="text-sm-right text-lg-center" data-uk-sticky="{ media: 992, boundary: '#end-cart', top: 0 }">
-                <div class="d-inline-flex flex-column cart-total pt-4 pt-sm-0 pb-sm-4 pb-md-0">
+              <div class="text-sm-right text-lg-center cart-total" data-uk-sticky="{ media: 992, boundary: '#end-cart', top: 24 }">
+                <div class="d-inline-flex flex-column pt-4 pt-sm-0 pb-sm-4 pb-md-0">
                   <div class="d-inline-flex flex-column flex-sm-row align-items-sm-baseline flex-lg-column text-lg-left">
                     <div class="text-gray mr-sm-3 mr-lg-0">Итого к оплате</div>
                     <div class="d-flex flex-column">
@@ -823,6 +832,7 @@
                   <span><button class="btn btn-outline-secondary btn-sm text-uppercase btn_higher mt-3 btn-width-medium">Быстрый заказ</button></span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -1567,6 +1577,7 @@
 
   <script src="bitrix/js/main/jquery/jquery-1.8.3.min.js?143290390393636"></script>
   <script src="javascripts/uikit.js"></script>
+  <script src="javascripts/sticky.js"></script>
   <script src="javascripts/app.js"></script>
 
 

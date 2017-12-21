@@ -10,6 +10,11 @@
         <path d="M0 0h24v24H0z"/>
         <path stroke="#FF6174" stroke-width="1.4" d="M8.364 9.42V5.225C8.364 3.444 9.992 2 12 2s3.636 1.444 3.636 3.226v4.193m.728-1.935H20V22H4V7.484h12.364z"/>
     </g>
+</symbol><symbol id="check-circle-fill-primary" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h24v24H0z"/>
+        <path stroke="#000" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM8.21 7.69l7.577 7.52m-7.548.028l7.52-7.577"/>
+    </g>
 </symbol><symbol id="chevron-down-black" viewBox="0 0 16 16">
     <g fill="none" fill-rule="evenodd">
         <path d="M0 0h16v16H0z"/>

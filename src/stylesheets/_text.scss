@@ -1,3 +1,7 @@
 .text-black {
   color: $black !important;
 }
+
+.text-error {
+  color: theme-color('primary');
+}

@@ -6,6 +6,8 @@ import 'bootstrap/js/dist/button';
 import Drop from 'tether-drop';
 // import Popper from 'popper';
 import autosize from 'autosize';
+import ismobile from 'ismobilejs';
+import $ from 'jquery';
 
 $(() => {
   // 60fps scrolling using pointer-events: none
@@ -23,6 +25,12 @@ $(() => {
       body.classList.remove('disable-hover');
     }, 500);
   }, false);
+
+  if (ismobile.phone) {
+    body.classList.add('is-mobile');
+  } else if (ismobile.tablet) {
+    body.classList.add('is-tablet');
+  }
 
   // drop
 
