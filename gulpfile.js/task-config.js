@@ -14,11 +14,12 @@ module.exports = {
       app: ['./app.js'],
       catalog: ['./catalog.js'],
       product: ['./product.js'],
+      checkout: ['./checkout.js'],
     },
   },
 
   browserSync: {
-    proxy: 'http://kare.dev.rockettool.ru/',
+    // proxy: 'http://kare.dev.rockettool.ru/',
     files: ['public/**'],
     serveStatic: ['public'],
     rewriteRules: [
@@ -29,11 +30,11 @@ module.exports = {
         },
       },
     ],
-    // server: {
-    //   // should match `dest` in
-    //   // path-config.json
-    //   baseDir: 'public'
-    // }
+    server: {
+      // should match `dest` in
+      // path-config.json
+      baseDir: 'public'
+    }
   },
 
   production: {
