@@ -1,5 +1,5 @@
-import Swiper from 'swiper';
 import $ from 'jquery';
+import Swiper from 'swiper/dist/js/swiper.js';
 
 export default class ProductDetailSlider {
   constructor(el) {
