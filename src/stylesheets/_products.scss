@@ -16,6 +16,13 @@
   &__max-width {
     max-width: 362px;
   }
+
+  &__alert {
+    @include media-breakpoint-down(xs) {
+      margin-left: -$grid-gutter-width;
+      margin-right: -$grid-gutter-width;
+    }
+  }
 }
 
 .product-card-header {

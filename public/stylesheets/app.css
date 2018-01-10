@@ -23175,6 +23175,11 @@ span.rub .text {
 .product-card__max-width {
   max-width: 362px; }
 
+@media (max-width: 575px) {
+  .product-card__alert {
+    margin-left: -20px;
+    margin-right: -20px; } }
+
 .product-card-header__nav {
   overflow: hidden;
   overflow-x: auto; }
@@ -23705,6 +23710,24 @@ popup-overlay,
 
 .text-error {
   color: #ff6174; }
+
+.font-weight-medium {
+  font-weight: 500 !important; }
+
+.text-arrow::after {
+  content: '›';
+  color: #cbcbcb;
+  margin-left: .3rem; }
+
+.alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent; }
+
+.alert-light {
+  background-color: #fafafa;
+  border-color: #fafafa;
+  color: #7e7e7e; }
 
 .wide-container {
   max-width: 1360px;

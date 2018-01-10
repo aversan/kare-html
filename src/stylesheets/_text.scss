@@ -5,3 +5,15 @@
 .text-error {
   color: theme-color('primary');
 }
+
+.font-weight-medium {
+  font-weight: $font-weight-medium !important;
+}
+
+.text-arrow {
+  &::after {
+    content: '›';
+    color: $gray-400;
+    margin-left: .3rem;
+  }
+}
