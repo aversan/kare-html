@@ -15,6 +15,7 @@ module.exports = {
       catalog: ['./catalog.js'],
       product: ['./product.js'],
       checkout: ['./checkout.js'],
+      showroom: ['./showroom.js'],
     },
   },
 

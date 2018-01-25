@@ -288,3 +288,144 @@
     display: block;
   }
 }
+
+/* new styles */
+
+.showroom-row {
+  &.row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.showroom-col {
+  &.col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.showroom-embed-container {
+  max-width: 600px;
+
+  @include media-breakpoint-down(xs) {
+    max-width: none;
+  }
+}
+
+.showroom-embed,
+.showroom-map {
+  &.embed-responsive {
+    @include media-breakpoint-down(xs) {
+      margin-left: -$grid-gutter-width;
+      margin-right: -$grid-gutter-width;
+      width: auto;
+    }
+
+    &::before {
+      padding-top: percentage(320 / 600);
+    }
+  }
+}
+
+.showroom-map {
+  &.embed-responsive {
+    &::before {
+      @include media-breakpoint-down(xs) {
+        padding-top: percentage(320 / 360);
+      }
+    }
+  }
+}
+
+.showrooms-map {
+  &.embed-responsive {
+    &::before {
+      padding-top: percentage(480 / 1440);
+
+      @include media-breakpoint-down(md) {
+        padding-top: percentage(400 / 768);
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding-top: percentage(400 / 360);
+      }
+    }
+  }
+}
+
+.showrooms-card-container {
+  margin-bottom: -(map-get($spacers, 7));
+
+
+  .showroom-card {
+    margin-bottom: map-get($spacers, 7);
+  }
+}
+
+.showrooms-control-city {
+  &.form-control {
+    min-width: 220px;
+    width: auto;
+  }
+}
+
+.showroom-card {
+  position: relative;
+  max-width: 360px;
+
+  @include media-breakpoint-down(xs) {
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+    max-width: none;
+  }
+
+  &__title {
+    max-width: 100%;
+  }
+
+  &__link {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__address {
+    padding-top: 1px;
+    max-width: 100%;
+  }
+
+  &__content {
+    @include media-breakpoint-down(xs) {
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+    }
+  }
+}
+
+.showrooms-row {
+  &.row {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+
+.showrooms-col {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.showrooms-title-h3 {
+  height: 60px;
+  margin-bottom: -30px;
+}
+
+
+.showrooms-container {
+  max-width: 840px;
+}

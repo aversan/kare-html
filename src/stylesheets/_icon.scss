@@ -214,4 +214,14 @@
       }
     }
   }
+
+  &_kare {
+    border-radius: 100px;
+    background-color: theme-color("primary");
+    color: $white;
+
+    &::before {
+      content: 'K'
+    }
+  }
 }

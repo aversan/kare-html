@@ -12,8 +12,15 @@
 
 .text-arrow {
   &::after {
-    content: '›';
-    color: $gray-400;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
     margin-left: .3rem;
+    width: 1em;
+    height: 1em;
+    background-size: cover;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzAwMCIgZD0iTTYgMTEuNjE5bDMuODEtMy44MUw2IDQiLz4KICAgIDwvZz4KPC9zdmc+Cg==);
+    background-position: 0 0;
+    opacity: .5;
   }
 }

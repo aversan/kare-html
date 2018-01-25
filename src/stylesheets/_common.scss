@@ -165,3 +165,12 @@ html {
 .mr-12px {
   margin-right: 12px;
 }
+
+.full-width-container {
+  width: calc(100vw - 10px);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

@@ -1,0 +1,57 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  {% include "_showroom/showroom-breadcrumb-2.html" %}
+</div>
+<div class="divider"></div>
+<div class="container-fluid container-max-width">
+  <h1 class="showroom-title mb-5 pb-sm-2 mb-sm-6">Шоу рум в МЦ «Экспострой»</h1>
+  <p class="typo-lg mb-2">
+    Москва, Нахимовский пр-т, 24, строение 5, 1 этаж
+  </p>
+  <p class="text-gray mb-4 d-flex align-items-middle">
+    <span class="icon icon_md icon_k-pin-small mr-2">
+      {{ sprite('k-pin-small') }}
+    </span>
+    <span>Официальный шоу-рум</span>
+  </p>
+  <div class="row no-gutters flex-nowrap">
+    <p class="col-auto typo-lg d-flex flex-column pr-5 mb-4">
+      <span>Пн–сб 10:00–20:00</span>
+      <span>Вс 10:00–19:00</span>
+    </p>
+    <p class="col-auto typo-lg d-flex flex-column mb-4">
+      <span><a class="text-gray-dark" href="tel:+74958990155">+7 495 899-01-55</a></span>
+      <span><a class="text-primary" href="mailto:info@kare-center.ru">info@kare-center.ru</a></span>
+    </p>
+  </div>
+  <div class="row mt-2 showroom-row">
+    <div class="col col-12 col-md-6 showroom-col">
+      <div class="showroom-embed-container mb-5 mb-lg-0">
+        {% include "_showroom/showroom-map.html" %}
+      </div>
+    </div>
+    <div class="col col-12 col-md-6 showroom-col">
+      <div class="showroom-embed-container">
+        <div class="embed-responsive showroom-embed">
+          <img class="embed-responsive-item" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+        </div>
+        <p class="text-gray-dark mt-5 mr-md-8 mb-0">Добро пожаловать в новый шоу-рум дизайнерской мебели и предметов интерьера KARE в МЦ «Экспострой». Рады представить огромный простор для творчества и наслаждения жизнью. Оцените наши нескучные идеи по меблировке и планированию вашего пространства. Вас ждет впечатляющий выбор диванов и кресел, решения для хранения в интерьере, дизайнерский свет, декор и  аксессуары.</p>
+      </div>
+    </div>
+  </div>
+  <div class="divider-large"></div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="bitrix/js/main/jquery/jquery-1.8.3.min.js"></script>
+<script src="javascripts/uikit.js"></script>
+<script>
+  var detailCoordinates = {"COORDINATES":{"long":"37.438091039658","lat":"55.88545725967"},"ADDRESS":"\u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448\u043e\u0441\u0441\u0435, 100 \u043c\u0435\u0442\u0440\u043e\u0432 \u043e\u0442 \u041c\u041a\u0410\u0414 (\u0432 \u0441\u0442\u043e\u0440\u043e\u043d\u0443 \u043e\u0431\u043b\u0430\u0441\u0442\u0438), \u0433. \u0425\u0438\u043c\u043a\u0438, \u0411\u0443\u0442\u0430\u043a\u043e\u0432\u043e 4, \u041c\u0426 \u0413\u0440\u0430\u043d\u0434, 1 \u044d\u0442\u0430\u0436","PIC_SRC":null,"NAME":"\u0428\u041e\u0423-\u0420\u0423\u041c KARE \u0412 \u041c\u0426 \u0413\u0420\u0410\u041d\u0414","PIN_TYPE":"1"};
+</script>
+<script src="local/templates/kare_redisign/js/init-little-map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTUgMRr0OiPGmzWITsJQABQjjicx_c9r8&callback=initLittleMap"></script>
+<script src="javascripts/app.js"></script>
+{% endblock %}
