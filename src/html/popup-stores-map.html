@@ -9,6 +9,36 @@
 {% endblock %}
 
 {% block javascript %}
-  {% include "_cart/cart-scripts.html" %}
+<script>
+  const POPUP_SHOWROOMS = [{
+    "COORDINATES":{
+      "lat":"55.672987",
+      "long":"37.58498"
+    },
+    "NAME":"\u0428\u041e\u0423-\u0420\u0423\u041c KARE \u0412 \u041c\u0426 \u042d\u041a\u0421\u041f\u041e\u0421\u0422\u0420\u041e\u0419",
+    "LINK":"\/show-rooms\/27064\/",
+    "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+    "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+    "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+    "PIN_TYPE":"1",
+    "COUNT":"1"
+  }, {
+    "COORDINATES":{
+      "lat":"55.702226",
+      "long":"37.3557541"
+    },
+    "NAME":"\u0428\u041e\u0423-\u0420\u0423\u041c KARE \u0412 \u041c\u0426 \u0422\u0420\u0418 \u041a\u0418\u0422\u0410",
+    "LINK":"\/show-rooms\/27063\/",
+    "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+    "ADDRESS":"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b., \u041e\u0434\u0438\u043d\u0446\u043e\u0432\u0441\u043a\u0438\u0439 \u0440-\u043d, \u041d\u043e\u0432\u043e\u0438\u0432\u0430\u043d\u043e\u0432\u0441\u043a\u043e\u0435 \u041f\u0413\u0422., \u0443\u043b. \u041b\u0443\u0433\u043e\u0432\u0430\u044f, 1, 1 \u044d\u0442\u0430\u0436",
+    "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/a28\/90_90_0\/a28dc270bdb4ed55d2ddba53f1dc1e91.jpg",
+    "PIN_TYPE":"2",
+    "COUNT":"9"
+  }];
+</script>
+<script src="bitrix/js/main/jquery/jquery-1.8.3.min.js"></script>
+<script src="javascripts/showroom-map.js"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru-RU"></script>
+<script>ymaps.ready(initPopupShowroomsMap);</script>
 {% endblock %}
 

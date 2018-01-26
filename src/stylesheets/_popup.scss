@@ -97,11 +97,19 @@ popup-overlay,
     }
   }
 
-  .popup-frame {
-    height: 600px;
+  .popup-showrooms-map {
+    &.embed-responsive {
+      &::before {
+        padding-top: percentage(600 / 920);
 
-    @include media-breakpoint-down(sm) {
-      height: 400px;
+        //@include media-breakpoint-down(md) {
+        //  padding-top: percentage(400 / 768);
+        //}
+
+        @include media-breakpoint-down(xs) {
+          padding-top: percentage(400 / 360);
+        }
+      }
     }
   }
 

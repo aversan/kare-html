@@ -23621,11 +23621,11 @@ popup-overlay,
     .popup-stores .popup-scrollable {
       max-height: 400px; } }
 
-.popup-stores .popup-frame {
-  height: 600px; }
-  @media (max-width: 767px) {
-    .popup-stores .popup-frame {
-      height: 400px; } }
+.popup-stores .popup-showrooms-map.embed-responsive::before {
+  padding-top: 65.21739%; }
+  @media (max-width: 575px) {
+    .popup-stores .popup-showrooms-map.embed-responsive::before {
+      padding-top: 111.11111%; } }
 
 .popup-stores .popup-title {
   font-size: 1.5625rem;
