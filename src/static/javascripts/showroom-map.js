@@ -50,7 +50,7 @@ function initShowroomsMap() {
 }
 
 function initShowroomMap() {
-  const myMap = new ymaps.Map('showroom-map', { center: [+SHOWROOM.COORDINATES.lat, +SHOWROOM.COORDINATES.long], zoom: 11, controls: ['zoomControl', 'fullscreenControl'] });
+  const myMap = new ymaps.Map('showroom-map', { center: [+SHOWROOM.COORDINATES.lat, +SHOWROOM.COORDINATES.long], zoom: 8, controls: ['zoomControl', 'fullscreenControl'] });
   const helpers = showroomMapHelpers();
 
   function setMarkers() {
