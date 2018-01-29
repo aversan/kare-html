@@ -46,11 +46,10 @@ function initShowroomsMap() {
   }
   setMarkers();
   myMap.setBounds(myMap.geoObjects.getBounds());
-  myMap.setZoom(myMap.getZoom(), { checkZoomRange: true });
 }
 
 function initShowroomMap() {
-  const myMap = new ymaps.Map('showroom-map', { center: [+SHOWROOM.COORDINATES.lat, +SHOWROOM.COORDINATES.long], zoom: 4, controls: ['zoomControl', 'fullscreenControl'] });
+  const myMap = new ymaps.Map('showroom-map', { center: [+SHOWROOM.COORDINATES.lat, +SHOWROOM.COORDINATES.long], zoom: 15, controls: ['zoomControl', 'fullscreenControl'] });
   const helpers = showroomMapHelpers();
 
   function setMarkers() {
@@ -59,7 +58,7 @@ function initShowroomMap() {
   }
   setMarkers();
   myMap.setBounds(myMap.geoObjects.getBounds());
-  myMap.setZoom(myMap.getZoom(), { checkZoomRange: true });
+  myMap.setZoom(15, { checkZoomRange: true });
 }
 
 function initPopupShowroomsMap() {
@@ -75,7 +74,6 @@ function initPopupShowroomsMap() {
   }
   setMarkers();
   myMap.setBounds(myMap.geoObjects.getBounds());
-  myMap.setZoom(myMap.getZoom(), { checkZoomRange: true });
 
   for (let i = 0; i < POPUP_SHOWROOMS.length; i++) {
     let showroom = POPUP_SHOWROOMS[i];
