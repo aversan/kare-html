@@ -1,0 +1,85 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+{% include "_main/video.html" %}
+<div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  <section>
+    <div class="container-fluid container-max-width">
+      {{
+      header_h3(
+      title='Интерьерные решения KARE',
+      button='Все интерьеры',
+      button_type='primary'
+      )
+      }}
+      <div class="main-interior-container">
+        {% include "_main/interior.html" %}
+      </div>
+    </div>
+  </section>
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  <div class="container-fluid container-max-width">
+    {% include "_main/catalog-banner.html" %}
+  </div>
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  {% include "_main/advantages.html" %}
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  <section>
+    <div class="container-fluid container-max-width">
+      {{
+      header_h3(
+      title='Хиты продаж',
+      button='Все хиты продаж'
+      )
+      }}
+      {% include "_shared/catalog-list-cols-4.html" %}
+    </div>
+  </section>
+<div class="divider-large d-none d-lg-block"></div>
+<div class="divider d-lg-none"></div>
+  {% include "_main/app-banner.html" %}
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  <section>
+    <div class="container-fluid container-max-width">
+      {{
+      header_h3(
+      title='Новости',
+      button='Все новости'
+      )
+      }}
+      <div class="row main-news-row">
+        <div class="col-12 col-sm-6 col-md-4 main-news-col d-flex">
+          {% include "_main/news-card.html" %}
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 main-news-col d-flex">
+          {% include "_main/news-card.html" %}
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 main-news-col d-flex d-sm-none d-md-flex">
+          {% include "_main/news-card.html" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  {% include "_main/subscribe.html" %}
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  <div class="container-fluid container-max-width">
+    {{
+    product_slider(
+        header_title='Вы уже смотрели'
+      )
+    }}
+  </div>
+  <div class="divider-large"></div>
+{% endblock %}
+
+{% block javascript %}
+  {% include "_main/main-scripts.html" %}
+{% endblock %}

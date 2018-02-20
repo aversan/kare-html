@@ -9,11 +9,23 @@
   <h1 class="catalog-title mb-4 mb-sm-3">Каталог</h1>
   {% include "_catalog/catalog-category.html" %}
   <div class="divider-large"></div>
-  {% include "_product/product-discount.html" %}
+  {{
+  product_slider(
+  header_title='Товары со скидкой'
+  )
+  }}
   <div class="divider-large"></div>
-  {% include "_product/product-popular.html" %}
+  {{
+  product_slider(
+  header_title='Популярные товары'
+  )
+  }}
   <div class="divider-large"></div>
-  {% include "_product/product-new.html" %}
+  {{
+  product_slider(
+  header_title='Новинки в этой категории'
+  )
+  }}
   <div class="divider-large"></div>
 </div>
 {% endblock %}

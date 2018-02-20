@@ -2,6 +2,9 @@
   overflow: hidden;
   max-width: 100%;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   &.disabled,
   &:disabled {
@@ -58,7 +61,8 @@
     padding: 0.75rem 1.5rem;
 
     &.btn-sm.text-uppercase {
-      line-height: 1.6;
+      // line-height: 1.6;
+      line-height: 1.15;
     }
 
     &.btn_icon {
@@ -88,18 +92,18 @@
 
 .btn-outline-secondary {
   color: $gray-700;
-  background-color: $white;
+  background-color: transparent;
 
   &:hover,
   &:focus {
     border-color: $gray-500;
-    background-color: $white;
+    background-color: transparent;
     color: $gray-700;
   }
 
   &.disabled,
   &:disabled {
-    background-color: $white;
+    background-color: transparent;
     border-color: theme-color("primary");
     color: theme-color("primary");
   }

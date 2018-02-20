@@ -1,0 +1,319 @@
+// main video
+
+.main-video {
+  &.embed-responsive {
+    max-height: calc(100vh - 8.75rem);
+
+    @include media-breakpoint-down(xs) {
+      margin-left: -$grid-gutter-width;
+      margin-right: -$grid-gutter-width;
+      width: auto;
+    }
+
+    &::before {
+      padding-top: percentage(774 / 1440);
+    }
+  }
+}
+
+.main-catalog-banner-container {
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+// main catalog banner
+
+.main-catalog-banner {
+  border: .1875rem solid $pink-light;
+  max-width: 1000px;
+  min-width: 320px;
+  position: relative;
+
+  &__row {
+    min-height: 194px;
+  }
+
+  &__col-left,
+  &__col-right {
+    position: static;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  &__col-left {
+    flex: 0 0 40%;
+    max-width: 40%;
+    max-height: 200px;
+    padding-left: 48px;
+    padding-right: 0;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-basis: 100%;
+      max-width: 100%;
+      max-height: 118px;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+
+  &__col-right {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 64px;
+    padding-right: 64px;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__link.btn {
+    min-width: 13rem;
+  }
+
+  &__image-wrapper {
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 2.5%;
+      bottom: 4%;
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+      background-image: url('data:image/png;base64,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');
+      background-size: contain;
+      width: 13.3%;
+      height: 13.3%;
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    @include media-breakpoint-down(xs) {
+      width: 13rem;
+      position: relative;
+      top: .5rem;
+    }
+  }
+}
+
+
+// main advantage
+
+.main-advantages {
+  background-color: $linen;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 64px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: url(../img/main_page/main-advantages-bg.png) 50% 40px no-repeat;
+  }
+
+  &__container {
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      max-width: 600px;
+    }
+  }
+
+  &__row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &__col-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__col-right {
+    padding-left: 80px;
+    padding-right: 80px;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__title.h1 {
+    @include media-breakpoint-down(xs) {
+      font-size: $h2-font-size;
+      line-height: 1.333;
+    }
+  }
+
+  &__list {
+    margin-left: -1rem;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+  }
+
+  &__button {
+    @include media-breakpoint-down(xs) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+
+// main news card
+
+.main-news-card {
+  position: relative;
+}
+
+.main-news-row {
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: -3rem;
+  }
+}
+
+.main-news-col {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-news-card {
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+
+// main app banner
+
+.main-app-banner {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $pink-lighter;
+  overflow: hidden;
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 24px;
+  }
+
+  &__row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  &__col-left,
+  &__col-right {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    left: -10px;
+
+    @include media-breakpoint-down(md) {
+      left: 75px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      left: 0;
+    }
+  }
+
+  &__col-left {
+    flex: 0 0 367px;
+    max-width: 367px;
+  }
+
+  &__col-right {
+    flex: 0 0 480px;
+    max-width: 480px;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  &__text {
+    line-height: 1.33;
+    opacity: .6;
+  }
+
+  &__image {
+    display: inline-block;
+    vertical-align: top;
+    width: 460px;
+    height: 238px;
+    background: url($main-app-banner-image-url) center center no-repeat;
+    background-size: contain;
+
+    @include media-breakpoint-down(xs) {
+      width: 460px * 0.806;
+      height: 238px * 0.806;
+      margin-top: 38px;
+    }
+  }
+}
+

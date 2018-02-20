@@ -2,3 +2,86 @@
   {% set viewBox = viewBox or "0 0 1 1"%}
   <svg viewBox="{{viewBox}}"><use xlink:href='images/icons.svg#{{id}}'></use></svg>
 {% endmacro %}
+
+{% macro product_slider(
+  header_title='',
+  header_link='Все товары',
+  class=''
+) %}
+<section class="product-viewed " data-module="product-slider">
+  {{
+  header_h3(
+  title='Вы уже смотрели',
+  button='Вся история',
+  class='product-header'
+  )
+  }}
+  <div class="swiper-container product-slider-container js-swiper-container">
+    <div class="swiper-wrapper product-slider-wrapper">
+      {% for i in [1,2,3,4,5,6,7,8] -%}
+      {% if loop.index <= 8 %}
+      <div class="swiper-slide product-slider-slide">
+        {% include "_shared/catalog-card-small.html" %}
+      </div>
+      {% endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro button_chevron_right(
+text='Кнопка'
+) %}
+<a class="btn btn-outline-secondary text-uppercase btn-sm pr-2" href="">
+  <span>
+    {{ text }}
+  </span>
+  <span class="icon icon_sm icon_chevron-right-black icon_black-muted ml-2">
+    {{ sprite('chevron-right-black') }}
+  </span>
+</a>
+{% endmacro %}
+
+{% macro header_h3(
+  title='Заголовок',
+  button='',
+  button_type='',
+  class=''
+) %}
+<header class="d-flex flex-column flex-sm-row flex-nowrap align-items-sm-end mb-4 {{ class }}">
+  <h3 class="mb-0">{{ title }}</h3>
+  <div class="spacer"></div>
+  {% if button_type == 'primary' %}
+    <div class="mt-3 mt-sm-0 ml-sm-3">
+      <a class="btn btn-primary btn-width-medium text-uppercase btn-sm pr-2" href="">
+        <span>
+        {{ button }}
+        </span>
+      </a>
+    </div>
+  {% else %}
+    <div class="mt-3 mt-sm-0 ml-sm-3">{{ button_chevron_right(button) }}</div>
+  {% endif %}
+</header>
+{% endmacro %}
+
+{#
+<header class="d-flex flex-column flex-sm-row flex-nowrap align-items-sm-end product-header mb-3 mb-sm-4">
+  <h3 class="mb-0">{{ header_title }}</h3>
+  <a class="typo-sm text-gray mt-2 mt-sm-0 ml-sm-3 text-nowrap" href="">{{ header_link }}</a>
+  <div class="spacer"></div>
+  <div class="product-header__buttons text-nowrap ml-4 d-none d-md-block">
+    <div class="btn btn_icon btn_circle-fill js-swiper-prev">
+				<span class="icon icon_md icon_chevron-left icon_white btn__icon">
+					{{ sprite('chevron-left') }}
+				</span>
+    </div>
+    <div class="btn btn_icon btn_circle-fill js-swiper-next">
+				<span class="icon icon_md icon_chevron-right icon_white btn__icon">
+					{{ sprite('chevron-right') }}
+				</span>
+    </div>
+  </div>
+</header>
+#}

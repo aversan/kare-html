@@ -5,6 +5,11 @@
   padding-top: 43px;
   padding-bottom: 40px;
   overflow: hidden;
+  position: relative;
+
+  &__row {
+    position: relative;
+  }
 
   @include media-breakpoint-down(sm) {
     padding-top: 48px;
@@ -12,7 +17,7 @@
   }
 
   @include media-breakpoint-down(xs) {
-    padding-bottom: 32px;
+    padding-bottom: 24px;
   }
 
   &__logo {
@@ -48,11 +53,7 @@
 
     &-phone-number {
       font-size: 1rem;
-    }
-
-    &-action {
-      font-size: .75rem;
-      opacity: .75;
+      line-height: 1;
     }
   }
 
@@ -68,13 +69,60 @@
   }
 
   &__nav {
-    font-size: $typo-font-size-xs;
+    font-size: $typo-font-size-sm;
     line-height: 1.1;
+
+    &_3d-room {
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        right: -1rem;
+        top: -.8rem;
+      }
+
+      @include media-breakpoint-down(xs) {
+        margin-top: 46px;
+      }
+    }
   }
 
   &__social {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+
     &-icon {
       opacity: .5;
+    }
+
+    &-width {
+      @include media-breakpoint-down(sm) {
+        width: 120px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: auto;
+      }
+    }
+
+    &-wrapper {
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 32px;
+        width: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      @include media-breakpoint-down(xs) {
+        position: static;
+        text-align: left;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 
@@ -104,6 +152,11 @@
     }
   }
 
+  &__col-left,
+  &__col-center {
+    position: static;
+  }
+
   &__col-left {
     @include media-breakpoint-up(md) {
       flex: 0 0 22%;
@@ -116,11 +169,6 @@
       flex: 0 0 78%;
       max-width: 78%;
     }
-
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 68.5%;
-      max-width: 68.5%;
-    }
   }
 
   &__up {
@@ -131,11 +179,16 @@
 
   &__copyright {
     @include media-breakpoint-down(xs) {
-      max-width: 186px;
+      max-width: 210px;
+      margin-top: -.3rem;
     }
 
-    &.typo-xs {
+    &.typo-sm {
       line-height: 20px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 12px;
+      }
     }
   }
 }

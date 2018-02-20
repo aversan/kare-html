@@ -162,3 +162,97 @@
     }
   }
 }
+
+.subscribe {
+  background-color: $blue;
+
+  &__container {
+    position: relative;
+    max-width: 1000px;
+
+    @include media-breakpoint-down(md) {
+      max-width: 650px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 360px;
+    }
+  }
+
+  &__row {
+    margin-left: -16px;
+    margin-right: -16px;
+    min-height: 92px;
+  }
+
+  &__col-1,
+  &__col-2,
+  &__col-3 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__col-1 {
+    flex: 0 0 280px;
+    max-width: 280px;
+
+    @include media-breakpoint-down(md) {
+      flex-basis: calc(100% - 134px);
+      max-width: calc(100% - 134px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__col-2 {
+    flex: 0 0 calc(100% - 414px);
+    max-width: calc(100% - 414px);
+
+    @include media-breakpoint-down(md) {
+      flex-basis: calc(100% - 134px);
+      max-width: calc(100% - 134px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__col-3 {
+    flex: 0 0 134px;
+    max-width: 134px;
+    max-height: 92px;
+
+    @include media-breakpoint-down(sm) {
+      position: static;
+    }
+  }
+
+  &__image {
+    width: 102px;
+    height: 180px;
+    background: url($subscribe-image-url) center center no-repeat;
+    background-size: contain;
+    margin-top: -40px;
+
+    @include media-breakpoint-down(sm) {
+      width: 74px;
+      height: 131px;
+      position: absolute;
+      right: $grid-gutter-width;
+      bottom: 0;
+    }
+  }
+
+  .subscribe__hint {
+    @include media-breakpoint-down(sm) {
+      margin-right: 94px;
+    }
+  }
+}
+
+

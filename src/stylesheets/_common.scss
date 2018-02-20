@@ -13,7 +13,6 @@ button {
   border: 0;
 }
 
-p:last-child,
 .text-content p:last-child {
   margin-bottom: 0;
 }
@@ -173,4 +172,15 @@ html {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.fill-area-link {
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

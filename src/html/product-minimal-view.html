@@ -33,7 +33,12 @@
 		</div>
 	</div>
 	<div class="divider-large"></div>
-	{% include "_product/product-viewed.html" %}
+  {{
+  product_slider(
+      header_title='Вы уже смотрели',
+      header_link='Все товары'
+    )
+  }}
 	<div class="divider-large"></div>
 </div>
 {% endblock %}

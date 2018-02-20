@@ -15,21 +15,18 @@
     <div class="col col-section">
       <div class="catalog-container">
         {% include "_catalog/catalog-toolbar-2.html" %}
-        <div class="row catalog-list-row">
-          {% for i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] -%}
-          {% if loop.index <= 16 %}
-          <div class="col-6 col-md-4 catalog-list-col d-flex">
-            {% include "_catalog/catalog-card.html" %}
-          </div>
-          {% endif %}
-          {%- endfor %}
-        </div>
+        {% include "_shared/catalog-list-cols-3.html" %}
         {% include "_catalog/catalog-footer.html" %}
       </div>
     </div>
   </div>
   <div class="divider-large"></div>
-  {% include "_product/product-viewed.html" %}
+  {{
+  product_slider(
+      header_title='Вы уже смотрели',
+      header_link='Все товары'
+    )
+  }}
   <div class="divider-large"></div>
 </div>
 {% endblock %}

@@ -1,6 +1,7 @@
 .icon {
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   vertical-align: middle;
   line-height: 1;
@@ -9,10 +10,6 @@
 
   & svg {
     fill: currentColor;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
 
   &_search,
