@@ -34,6 +34,11 @@
         <path d="M0 0h16v16H0z"/>
         <path stroke="#000" d="M6 11.619l3.81-3.81L6 4"/>
     </g>
+</symbol><symbol id="chevron-right-gray" viewBox="0 0 16 16">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h16v16H0z"/>
+        <path stroke="#000" d="M6 11.619l3.81-3.81L6 4"/>
+    </g>
 </symbol><symbol id="chevron-right" viewBox="0 0 24 24">
     <g fill="none" fill-rule="evenodd">
         <path stroke-width="1.5" d="M7 2l10 10L7 22"/>

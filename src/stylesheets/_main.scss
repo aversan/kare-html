@@ -1,18 +1,26 @@
 // main video
 
 .main-video {
+  @include media-breakpoint-down(xs) {
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+  }
+
   &.embed-responsive {
     max-height: calc(100vh - 8.75rem);
 
     @include media-breakpoint-down(xs) {
-      margin-left: -$grid-gutter-width;
-      margin-right: -$grid-gutter-width;
       width: auto;
     }
 
     &::before {
       padding-top: percentage(774 / 1440);
     }
+  }
+
+  &.cover {
+    height: 53.75vw; // 774 / 1440
+    max-height: calc(100vh - 8.75rem);
   }
 }
 
