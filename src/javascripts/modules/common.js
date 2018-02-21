@@ -30,6 +30,8 @@ $(() => {
     body.classList.add('is-mobile');
   } else if (ismobile.tablet) {
     body.classList.add('is-tablet');
+  } else {
+    body.classList.add('is-desktop');
   }
 
   // drop

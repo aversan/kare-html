@@ -26,6 +26,16 @@
       {% endif %}
       {%- endfor %}
     </div>
+    <div class="btn btn_icon btn_circle-fill btn_circle-fill_sticky-left js-swiper-prev product-slider__prev">
+        <span class="icon icon_md icon_chevron-left icon_white btn__icon">
+          {{ sprite('chevron-left') }}
+        </span>
+    </div>
+    <div class="btn btn_icon btn_circle-fill btn_circle-fill_sticky-right js-swiper-next product-slider__next">
+        <span class="icon icon_md icon_chevron-right icon_white btn__icon">
+          {{ sprite('chevron-right') }}
+        </span>
+    </div>
   </div>
 </section>
 {% endmacro %}

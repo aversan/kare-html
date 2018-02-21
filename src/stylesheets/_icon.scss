@@ -221,4 +221,16 @@
       content: 'K'
     }
   }
+
+  &_appstore {
+  	&,
+  	& svg {
+  		width: 120px;
+  		height: 34px;
+  	}
+
+  	& svg {
+  		height: 120px;
+  	}
+  }
 }

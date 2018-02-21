@@ -86,7 +86,17 @@
 
   &_circle-fill {
     border-radius: 100px;
-    background-color: $gray-400;
+    background-color: rgba($gray-600, .5);
+
+    &_sticky-left {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &_sticky-right {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 }
 

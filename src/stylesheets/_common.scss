@@ -110,8 +110,8 @@ html {
   }
 }
 
-.disable-hover,
-.disable-hover * {
+.is-desktop.disable-hover,
+.is-desktop.disable-hover * {
   pointer-events: none !important;
 }
 

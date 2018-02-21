@@ -246,6 +246,32 @@
       }
     }
   }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: none;
+
+    &.swiper-button-disabled {
+      opacity: .6;
+      cursor: default;
+    }
+
+    .is-desktop & {
+      display: block;
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
 }
 
 .product-slider-container_popup {
