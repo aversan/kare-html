@@ -1,8 +1,12 @@
 {% extends 'layouts/application.html' %}
-
-{% block content %}
-{% include "_main/video.html" %}
-<div class="divider-large d-none d-lg-block"></div>
+  {% block content %}
+  {% include "_main/video.html" %}
+  <div class="divider-large d-none d-lg-block"></div>
+  <div class="divider d-lg-none"></div>
+  <div class="container-fluid container-max-width">
+    {% include "_main/catalog-banner.html" %}
+  </div>
+  <div class="divider-large d-none d-lg-block"></div>
   <div class="divider d-lg-none"></div>
   <section>
     <div class="container-fluid container-max-width">
@@ -18,11 +22,6 @@
       </div>
     </div>
   </section>
-  <div class="divider-large d-none d-lg-block"></div>
-  <div class="divider d-lg-none"></div>
-  <div class="container-fluid container-max-width">
-    {% include "_main/catalog-banner.html" %}
-  </div>
   <div class="divider-large d-none d-lg-block"></div>
   <div class="divider d-lg-none"></div>
   {% include "_main/advantages.html" %}
