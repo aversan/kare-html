@@ -9,9 +9,10 @@
   <h1 class="showrooms-title mb-5 mb-sm-6">Наши шоу-румы</h1>
   <div class="form-group mb-4">
     <label class="sr-only" for="control-city">Выбор города</label>
-    <select class="form-control bootstrap-select showrooms-control-city js-city-select" name="" id="control-city">
-      <option selected value="/show-rooms/">Все города</option>
-      <option value="/show-rooms/?arrFilter_pf[CITY]=832&set_filter=Y">Москва</option>
+    <select class="form-control bootstrap-select showrooms-control-city js-select-region" name="" id="control-city">
+      <option selected value="">Все города</option>
+      <option value="Novosibirsk">Новосибирск</option>
+      <option value="Moscow">Москва</option>
     </select>
   </div>
   <div class="showrooms-map-container full-width-container mb-6 pb-3">
@@ -30,10 +31,6 @@
         </h3>
         <div class="showrooms-card-container pt-6">
           {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
         </div>
       </div>
       <div class="col-12 d-sm-none">
@@ -47,12 +44,6 @@
           <span>Шоу-румы партнеров</span>
         </h3>
         <div class="showrooms-card-container pt-6">
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
-          {% include "_showroom/showroom-card.html" %}
           {% include "_showroom/showroom-card.html" %}
         </div>
       </div>
@@ -71,6 +62,8 @@
       "lat":"55.672987",
       "long":"37.58498"
     },
+    "ID": "p26866",
+    "REGION": "Moscow",
     "NAME":"\u0428\u041e\u0423-\u0420\u0423\u041c KARE \u0412 \u041c\u0426 \u042d\u041a\u0421\u041f\u041e\u0421\u0422\u0420\u041e\u0419",
     "LINK":"\/show-rooms\/27064\/",
     "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
@@ -82,6 +75,8 @@
       "lat":"55.702226",
       "long":"37.3557541"
     },
+    "ID": "p26859",
+    "REGION": "Novosibirsk",
     "NAME":"\u0428\u041e\u0423-\u0420\u0423\u041c KARE \u0412 \u041c\u0426 \u0422\u0420\u0418 \u041a\u0418\u0422\u0410",
     "LINK":"\/show-rooms\/27063\/",
     "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",

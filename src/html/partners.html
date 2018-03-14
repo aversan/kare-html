@@ -1,0 +1,204 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+<div class="contacts-page__wrapper contacts-page__wrapper--partners">
+  <div class="partners-map-container">
+    {% include "_partners/contacts.html" %}
+    {% include "_partners/map.html" %}
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="bitrix/js/main/jquery/jquery-1.8.3.min.js"></script>
+<script src="javascripts/uikit.js"></script>
+<script>
+  var SHOWROOMS = [
+          {
+      ID: "p26860",
+      REGION: "",
+      NAME: "Интернет-магазин Mattoni-Decor",
+      COORDINATES: {
+        lat: "",
+        long: ""
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p28099",
+      REGION: "",
+      NAME: "Дизайн-студия &quot;Архидея&quot;",
+      COORDINATES: {
+        lat: "55.779226",
+        long: "49.127506"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26862",
+      REGION: "Kaliningrad",
+      NAME: "Салон DOM&DECOR",
+      COORDINATES: {
+        lat: "54.714996701045",
+        long: "20.493180602789"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26861",
+      REGION: "Kaliningrad",
+      NAME: "Салон DOM&DECOR",
+      COORDINATES: {
+        lat: "54.710267772747",
+        long: "20.439065694809"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26865",
+      REGION: "Kazakhstan",
+      NAME: "Шоу-рум MarinaMali",
+      COORDINATES: {
+        lat: "53.218779683334",
+        long: "63.639335632324"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p28101",
+      REGION: "",
+      NAME: "Архитектурное бюро MART ARCHITECTS",
+      COORDINATES: {
+        lat: "55.760054",
+        long: "37.588188"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26863",
+      REGION: "Moscow",
+      NAME: "Салон ECLECT",
+      COORDINATES: {
+        lat: "55.742284097632",
+        long: "38.009814620018"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26864",
+      REGION: "Moscow",
+      NAME: "Салон GARDA DECOR",
+      COORDINATES: {
+        lat: "55.697569696617",
+        long: "37.500251233578"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26866",
+      REGION: "Moscow",
+      NAME: "Салон Garda Decor",
+      COORDINATES: {
+        lat: "55.763884199179",
+        long: "37.844915091991"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p28100",
+      REGION: "",
+      NAME: "Дизайн-студия &quot;Архидея&quot;",
+      COORDINATES: {
+        lat: "55.716772",
+        long: "52.371188"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26867",
+      REGION: "Moscow",
+      NAME: "Салон Garda Decor",
+      COORDINATES: {
+        lat: "55.710866391192",
+        long: "37.352828979492"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+          {
+      ID: "p26859",
+      REGION: "Novosibirsk",
+      NAME: "Шоу-рум APRIORI DESIGN",
+      COORDINATES: {
+        lat: "55.081781916566",
+        long: "82.933398485184"
+      },
+      "LINK":"\/show-rooms\/27064\/",
+      "CITY":"\u041c\u043e\u0441\u043a\u0432\u0430 ",
+      "ADDRESS":"\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, 24, \u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 5, 1 \u044d\u0442\u0430\u0436",
+      "PREVIEW_PIC":"\/upload\/resize_cache\/iblock\/0a7\/90_90_0\/0a7f96f1184adf9a006cfe9b352b02bb.jpg",
+      "PIN_TYPE":"1"
+    },
+  ];
+
+  $(function(){
+    $('.js-contacts-select').on('click', function(){
+      $(this).toggleClass('opened');
+      $(this).find('.contacts-select__dropdown').slideToggle({duration:200});
+    });
+    $('.contacts-select__item').on('click', function(){
+      $(this).closest('.contacts-select').find('.contacts-select__item').removeClass('selected');
+      var text = $(this).html();
+      $(this).closest('.contacts-select').find('.contacts-select__initial .text').html(text);
+      $(this).addClass('selected');
+    });
+  });
+</script>
+<script src="javascripts/showroom-map.js"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru-RU"></script>
+<script>ymaps.ready(initPartnersMap);</script>
+<script src="javascripts/app.js"></script>
+{% endblock %}

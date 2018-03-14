@@ -26592,11 +26592,26 @@ a.rounded-button:hover {
   right: 30px;
   top: 30px; }
 
-.partners-map {
+.partners-map-container {
   position: relative;
-  height: 960px; }
-  .partners-map .contacts-map__wrapper {
-    height: 960px; }
+  min-height: 960px; }
+  @media (max-width: 991px) {
+    .partners-map-container {
+      min-height: 0; } }
+
+.partners-map.embed-responsive {
+  min-height: 960px; }
+  @media (max-width: 991px) {
+    .partners-map.embed-responsive {
+      min-height: 0; } }
+  .partners-map.embed-responsive::before {
+    padding-top: 33.33333%; }
+    @media (max-width: 991px) {
+      .partners-map.embed-responsive::before {
+        padding-top: 52.08333%; } }
+    @media (max-width: 575px) {
+      .partners-map.embed-responsive::before {
+        padding-top: 111.11111%; } }
 
 .contacts-partners {
   position: absolute;

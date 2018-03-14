@@ -1,3 +1,5 @@
+var markers = {};
+
 function showroomMapHelpers() {
   const ballonHTML = ({ PREVIEW_PIC, ADDRESS, LINK }) => `
       <article class="map-marker-info js-map-marker">
@@ -20,10 +22,16 @@ function showroomMapHelpers() {
       const pinType = +showroom.PIN_TYPE;
       const iconImageHref = pinType === 2 ? imagePartnerUrl : imageUrl;
       const hintContent = showroom.NAME;
+      const name = showroom.NAME;
+      const id = showroom.ID;
+      const region = showroom.REGION;
 
       return new ymaps.Placemark([lat, lng], {
         hintContent,
         balloonContent: ballonHTML(showroom),
+        title: name,
+        id: id,
+        region: region,
       }, {
         iconLayout: 'default#image',
         iconImageHref,
@@ -34,18 +42,105 @@ function showroomMapHelpers() {
   };
 }
 
-function initShowroomsMap() {
-  const myMap = new ymaps.Map('showrooms-map', { center: [55.76, 37.64], zoom: 4, controls: ['zoomControl', 'fullscreenControl'] });
+function initPartnersMap() {
+  const myMap = new ymaps.Map('partners-map', { center: [55.76, 37.64], zoom: 4, controls: ['zoomControl', 'fullscreenControl'] });
   const helpers = showroomMapHelpers();
-
+  var myPointsCollection = new ymaps.GeoObjectCollection();
   function setMarkers() {
     for (let i = 0; i < SHOWROOMS.length; i++) {
-      myMap.behaviors.disable('scrollZoom');
-      myMap.geoObjects.add(helpers.marker(SHOWROOMS[i]));
+      var showroom = SHOWROOMS[i];
+      var marker = helpers.marker(showroom);
+      markers[showroom.ID] = marker;
+      myPointsCollection.add(marker);
+
+      $('.js-partner[data-id='+showroom.ID+']').on('click', function(){
+        // for (var key in markers) {
+        //   markers[key].setIcon(image);
+        // }
+        var currentID = $(this).attr('data-id');
+        // markers[currentID].setIcon(imageActive);
+        myMap.setZoom(15);
+        myMap.setCenter(markers[currentID].geometry._coordinates);
+      });
     }
+    myMap.geoObjects.add(myPointsCollection);
+    myMap.setBounds(myPointsCollection.getBounds());
   }
   setMarkers();
   myMap.setBounds(myMap.geoObjects.getBounds());
+
+  $('.js-choose-region').on('click', function(){
+    var region = $(this).attr('data-region');
+
+    $('.js-partner').hide();
+    $('.js-hidden-part').attr('style', '');
+    $('.js-caret').removeClass('active');
+
+    if (region) {
+      $('.js-partner[data-region='+region+']').show();
+    } else {
+      $('.js-partner').show();
+    };
+
+    myPointsCollection = new ymaps.GeoObjectCollection();
+    for (var key in markers) {
+      if (region === '' || markers[key].properties._data.region === region) {
+        myPointsCollection.add(markers[key]);
+      }
+    }
+    myMap.geoObjects.add(myPointsCollection);
+    myMap.setBounds(myPointsCollection.getBounds());
+  });
+
+  $('.js-partner').on('click', function(){
+    if(!$(this).hasClass('active')) {
+      $('.js-partner').removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+  
+  $('.js-caret').on('click', function(){
+    $(this).siblings('.js-hidden-part').slideToggle();
+    $(this).toggleClass('active');
+  });
+}
+
+function initShowroomsMap() {
+  const myMap = new ymaps.Map('showrooms-map', { center: [55.76, 37.64], zoom: 4, controls: ['zoomControl', 'fullscreenControl'] });
+  const helpers = showroomMapHelpers();
+  var myPointsCollection = new ymaps.GeoObjectCollection();
+  function setMarkers() {
+    for (let i = 0; i < SHOWROOMS.length; i++) {
+      var showroom = SHOWROOMS[i];
+      var marker = helpers.marker(showroom);
+      markers[showroom.ID] = marker;
+      myPointsCollection.add(marker);
+    }
+    myMap.geoObjects.add(myPointsCollection);
+    myMap.setBounds(myPointsCollection.getBounds());
+  }
+  setMarkers();
+  myMap.setBounds(myMap.geoObjects.getBounds());
+
+  $('.js-select-region').on('change', function(){
+    var region = $(this).val();
+
+    if (region) {
+      $('.js-partner').hide();
+      $('.js-partner[data-region='+region+']').show() 
+    } else {
+      $('.js-partner').show();
+    };
+
+    myPointsCollection = new ymaps.GeoObjectCollection();
+    for (var key in markers) {
+      if (region === '' || markers[key].properties._data.region === region) {
+        myPointsCollection.add(markers[key]);
+      }
+    }
+    myMap.geoObjects.add(myPointsCollection);
+    myMap.setBounds(myPointsCollection.getBounds());
+  });
 }
 
 function initShowroomMap() {

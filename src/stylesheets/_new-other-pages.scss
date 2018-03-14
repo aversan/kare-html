@@ -2246,12 +2246,34 @@ a.rounded-button:hover {
   top: 30px;
 }
 
-.partners-map {
+.partners-map-container {
   position: relative;
-  height: 960px;
+  min-height: 960px;
 
-  .contacts-map__wrapper {
-    height: 960px;
+  @include media-breakpoint-down(md) {
+    min-height: 0;
+  }
+}
+
+.partners-map {
+  &.embed-responsive {
+    min-height: 960px;
+
+    @include media-breakpoint-down(md) {
+      min-height: 0;
+    }
+
+    &::before {
+      padding-top: percentage(480 / 1440);
+
+      @include media-breakpoint-down(md) {
+        padding-top: percentage(400 / 768);
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding-top: percentage(400 / 360);
+      }
+    }
   }
 }
 
