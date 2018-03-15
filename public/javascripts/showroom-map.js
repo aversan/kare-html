@@ -47,6 +47,8 @@ function initPartnersMap() {
   const helpers = showroomMapHelpers();
   let myPointsCollection = new ymaps.GeoObjectCollection();
 
+  myMap.behaviors.disable('scrollZoom');
+
   function setMarkers() {
     for (let i = 0; i < SHOWROOMS.length; i++) {
       const showroom = SHOWROOMS[i];
@@ -111,6 +113,8 @@ function initShowroomsMap() {
   const helpers = showroomMapHelpers();
   let myPointsCollection = new ymaps.GeoObjectCollection();
 
+  myMap.behaviors.disable('scrollZoom');
+
   function setMarkers() {
     for (let i = 0; i < SHOWROOMS.length; i++) {
       const showroom = SHOWROOMS[i];
@@ -151,6 +155,8 @@ function initShowroomMap() {
   const myMap = new ymaps.Map('showroom-map', { center: [+SHOWROOM.COORDINATES.lat, +SHOWROOM.COORDINATES.long], zoom: 15, controls: ['zoomControl', 'fullscreenControl'] });
   const helpers = showroomMapHelpers();
 
+  myMap.behaviors.disable('scrollZoom');
+
   function setMarker() {
     const marker = helpers.marker(SHOWROOM);
 
@@ -166,6 +172,8 @@ function initPopupShowroomsMap() {
   const helpers = showroomMapHelpers();
   const menuContainer = $('#popup-showrooms-nav');
   const myPointsCollection = new ymaps.GeoObjectCollection();
+
+  myMap.behaviors.disable('scrollZoom');
 
   function setMarkers() {
     for (let i = 0; i < POPUP_SHOWROOMS.length; i++) {
