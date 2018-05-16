@@ -179,3 +179,7 @@ html {
     z-index: 1;
   }
 }
+
+.uk-offcanvas-overlay::before {
+  background: rgba($gray-600, .5);
+}

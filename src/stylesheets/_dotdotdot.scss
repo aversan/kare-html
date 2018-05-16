@@ -37,8 +37,11 @@
     }
 
     &.dotdotdot_full-text .dotdotdot__text {
-      max-height: 84px;
-      overflow-y: auto;
+      max-height: none;
+    }
+
+    &.dotdotdot_full-text .dotdotdot__toggle {
+      display: none;
     }
   }
 

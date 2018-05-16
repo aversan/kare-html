@@ -1,12 +1,12 @@
 <div class="d-flex flex-column flex-md-row flex-md-nowrap mt-6 mt-sm-4 interiors-toolbar d-lg-none mx-auto">
-  <span class="btn btn-outline-secondary text-lef d-inline-flex align-items-center text-uppercase btn-sm interiors-filter-btn btn-width-large" uk-toggle="target:#offcanvas-interiors-filter">
+  <button class="btn btn-outline-secondary text-lef d-inline-flex align-items-center text-uppercase btn-sm catalog-filter-toggle btn-width-large" uk-toggle="target:#offcanvas-interiors-filter">
     <span class="icon icon_sm icon_sort-black icon_black-muted mr-2 btn__icon">
       {{ sprite('funnel-black') }}
     </span>
     <span class="mr-2 font-weight-medium btn__text">Фильтры</span>
     <span class="btn__badge px-2 mr-2">1</span>
-    <span class="icon icon_md icon_close-black icon_black-muted ml-auto btn__icon icon_hoverable">
+    <a class="icon icon_md icon_close-black icon_black-muted ml-auto btn__icon icon_hoverable" href="#">
       {{ sprite('close-black') }}
-    </span>
-  </span>
+    </a>
+  </button>
 </div>

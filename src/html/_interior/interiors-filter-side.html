@@ -1,0 +1,16 @@
+<div id="offcanvas-interiors-filter" uk-offcanvas="mode: push; overlay: true" class="catalog-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+    <div class="catalog-filter d-flex flex-column mt-lg-4 js-catalog-filter">
+      <div class="catalog-filter__section d-lg-none catalog-filter__section_buttons-mobile">
+        <div class="catalog-filter__section-body">
+          <button class="btn btn-sm btn-primary text-uppercase">Применить</button>
+          <button class="btn btn-sm btn-outline-secondary text-uppercase ml-2">Сбросить</button>
+        </div>
+      </div>
+      {% include "_interior/interiors-filter-1-side.html" %}
+      {% include "_interior/interiors-filter-2-side.html" %}
+      {% include "_interior/interiors-filter-3-side.html" %}
+    </div>
+  </div>
+</div>
