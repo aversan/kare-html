@@ -107,10 +107,14 @@
   }
 
   &.selected {
-    cursor: default;
-    background-color: $pink-light;
     border-radius: .125rem;
-    color: $white;
+
+    &,
+    &:hover,
+    &:focus {
+      background-color: $pink-light;
+      color: $white !important;      
+    }
   }
 }
 
