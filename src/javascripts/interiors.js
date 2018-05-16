@@ -18,4 +18,10 @@ $(() => {
       }
     });
   });
+
+  $(document.body).on('click', '.catalog-filter-item', function(e) {
+    var self = $(this);
+    self.toggleClass('selected');
+    return false;
+  });
 });
