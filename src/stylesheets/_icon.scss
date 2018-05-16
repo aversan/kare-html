@@ -90,13 +90,15 @@
   }
 
   &_black-muted {
+    opacity: .5;
+
     &,
     & svg {
       color: $black;
     }
 
-    & {
-      opacity: .5;
+    &.icon_hoverable:hover {
+      opacity: .65;
     }
   }
 

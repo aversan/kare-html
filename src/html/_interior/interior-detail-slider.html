@@ -1,0 +1,50 @@
+	<div class="pt-4 pt-md-0" data-module="interior-detail-slider">
+		<div class="interior-detail-slider-main js-swiper-main">
+			<div class="swiper-container interior-detail-slider-container order-2 js-swiper-container">
+				<div class="swiper-wrapper interior-detail-slider-wrapper">
+					<div class="swiper-slide interior-detail-slider-slide">
+						<img class="interior-detail-slider-slide__image" src="http://via.placeholder.com/1200x600" alt="" width="1200" height="600">
+					</div>
+					<div class="swiper-slide interior-detail-slider-slide">
+						<img class="interior-detail-slider-slide__image" src="http://via.placeholder.com/600x1200" alt="" width="600" height="1200">
+					</div>
+					{% for i in [1,2,3] -%}
+					{% if loop.index <= 3 %}
+					<div class="swiper-slide interior-detail-slider-slide">
+						<img class="interior-detail-slider-slide__image" src="http://via.placeholder.com/1200x600" alt="" width="1200" height="600">
+					</div>
+					{% endif %}
+					{%- endfor %}
+				</div>
+			</div>
+			<div class="btn btn_icon btn_circle-fill interior-detail-slider-prev order-1 d-none d-md-block js-swiper-prev">
+				<span class="icon icon_md icon_chevron-left icon_white btn__icon">
+					{{ sprite('chevron-left') }}
+				</span>
+			</div>
+			<div class="btn btn_icon btn_circle-fill interior-detail-slider-next order-3 d-none d-md-block js-swiper-next">
+				<span class="icon icon_md icon_chevron-right icon_white btn__icon">
+					{{ sprite('chevron-right') }}
+				</span>
+			</div>
+		</div>
+		<div class="interior-detail-slider-navigation js-swiper-navigation">
+			<div class="swiper-container interior-detail-slider-container justify-content-center  js-swiper-container" data-slides-per-view='6'>
+				<div class="swiper-wrapper interior-detail-slider-wrapper">
+					<div class="swiper-slide interior-detail-slider-slide">
+						<img class="interior-detail-slider-slide__image" src="http://via.placeholder.com/1200x600" alt="" width="1200" height="600">
+					</div>
+					<div class="swiper-slide interior-detail-slider-slide">
+						<img class="interior-detail-slider-slide__image" src="http://via.placeholder.com/600x1200" alt="" width="600" height="1200">
+					</div>
+					{% for i in [1,2,3] -%}
+					{% if loop.index <= 3 %}
+					<div class="swiper-slide interior-detail-slider-slide">
+						<img class="interior-detail-slider-slide__image" src="http://via.placeholder.com/1200x600" alt="" width="1200" height="600">
+					</div>
+					{% endif %}
+					{%- endfor %}
+				</div>
+			</div>
+		</div>
+	</div>

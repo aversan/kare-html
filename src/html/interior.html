@@ -1,0 +1,72 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  {% include "_interior/interior-breadcrumb.html" %}
+</div>
+<div class="divider"></div>
+<div class="container-fluid container-max-width">
+	<div class="interior-header d-flex flex-column flex-lg-row flex-nowrap justify-content-lg-between mb-6">
+		<h1 class="mb-4 mb-lg-0 text-truncate">Brooklyn Nature</h1>
+		<div class="interior-header__nav d-flex flex-column flex-md-row flex-nowrap">
+      <a class="d-flex flex-nowrap text-gray-dark align-items-center interior-header__nav-prev ml-md-0 ml-lg-4" href="#">
+        <span class="icon icon_md icon_chevron-left icon_black icon_black-muted mr-2">
+          {{ sprite('chevron-left') }}
+        </span>
+        <span class="d-flex flex-column">
+	        <span class="text-muted typo-xs">Предыдущий</span>
+	        <span class="typo-sm text-truncate">Vintage Romance</span>
+        </span>
+      </a>
+      <a class="d-flex flex-nowrap text-gray-dark align-items-center interior-header__nav-next flex-row-reverse text-right mt-2 mt-md-0 ml-auto ml-md-4" href="#">
+        <span class="icon icon_md icon_chevron-right icon_black icon_black-muted ml-2">
+          {{ sprite('chevron-right') }}
+        </span>
+        <span class="d-flex flex-column">
+	        <span class="text-muted typo-xs">Следующий</span>
+	        <span class="typo-sm text-truncate">Amsterdam Diningroom</span>
+        </span>
+      </a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-5 col-lg-4 d-flex flex-column align-items-center">
+			<figure class="typo-note typo-lg px-5 px-lg-6 pt-5 pb-6 mb-4 mt-md-3">
+				Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+			</figure>
+			<div>
+	      <a title="Добавить в WishList" class="btn text-uppercase btn-outline-secondary basket-button js-to-basket js-to-wish-btn " rel="nofollow" href="/ajax/item.php" data-item="16228" data-type="wish">
+	        <span class="icon icon_md icon_like-black icon_black-muted mr-2">
+	          {{ sprite('like-black') }}
+	        </span>
+	        <span class="icon icon_md icon_like-red mr-2">
+	          {{ sprite('like-red') }}
+	        </span>
+	        <span class="btn__text">В избранное</span>
+	      </a>
+      </div>
+			<div class="divider interior-divider d-md-none"></div>
+		</div>
+		<div class="col-12 col-md-7 col-lg-8 pl-md-4 pl-lg-7">
+			<div class="typo-lg interior-text">
+				<p>Тоска по природе и спокойствию в наших собственных четырёх стенах формирует потребность в высеченных декоративных элементах из натуральных материалов. Elements связаны с архаичными ландшафтами и демонстрируют захватывающее сочетание древесины со стеклом и металлом. Коллекция пышет дикой природой.</p>
+				<p>Коллекция включает решения для обстановки гостиной, где центральное место уделяется серии премиальных диванов. Здесь представлены комплекты корпусной мебели, столы из массива для обеденной зоны в сочетании с элегантными стульями. Естественный шарм коллекции подчеркивают оригинальные аксессуары и живописные картины.</p>
+			</div>
+		</div>		
+	</div>
+	<div class="divider interior-divider"></div>
+	{% include "_interior/interior-detail-slider.html" %}
+  <div class="divider-large"></div>
+  <div class="catalog-container">
+		<h2 class="mb-5">Товары интерьера</h3>
+    {% include "_shared/catalog-toolbar-1.html" %}
+    {% include "_shared/catalog-list-cols-4.html" %}
+    {% include "_shared/catalog-footer.html" %}
+  </div>
+  <div class="divider-large interior-divider"></div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+  {% include "_interior/interior-scripts.html" %}
+{% endblock %}

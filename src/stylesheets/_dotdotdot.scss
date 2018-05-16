@@ -31,6 +31,17 @@
     }
   }
 
+  &_interiors-filter {
+    .dotdotdot__text {
+      max-height: 56px;
+    }
+
+    &.dotdotdot_full-text .dotdotdot__text {
+      max-height: 84px;
+      overflow-y: auto;
+    }
+  }
+
   &_product-options {
     .dotdotdot__text {
       max-height: 264px;

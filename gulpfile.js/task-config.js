@@ -13,6 +13,8 @@ module.exports = {
       // javascripts.dest in path-config.json
       app: ['./app.js'],
       catalog: ['./catalog.js'],
+      interior: ['./interior.js'],
+      interiors: ['./interiors.js'],
       product: ['./product.js'],
       checkout: ['./checkout.js'],
       showroom: ['./showroom.js'],

@@ -393,7 +393,8 @@
     @include media-breakpoint-down(xs) {
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: -(map-get($spacers, 3));
+      //margin-bottom: -(map-get($spacers, 3));
+      padding-bottom: 1rem;
     }
   }
 
@@ -552,14 +553,14 @@
   padding: 40px;
 }
 
-.catalog-toolbar {
-  .btn {
-    @include media-breakpoint-down(sm) {
-      display: block;
-      width: 100%;
-    }
-  }
-}
+// .catalog-toolbar {
+//   .btn {
+//     @include media-breakpoint-down(sm) {
+//       display: block;
+//       width: 100%;
+//     }
+//   }
+// }
 
 .catalog-offcanvas {
   &.uk-offcanvas {

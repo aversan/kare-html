@@ -676,74 +676,302 @@
       </header>
 
 
+      <div class="container-fluid">
+        <nav class="breadcrumb typo-xs catalog-breadcrumb" aria-label="breadcrumb" role="navigation">
+          <a class="breadcrumb-item" href="#">KARE</a>
+          <a class="breadcrumb-item" href="#">О компании</a>
+          <span class="breadcrumb-item active" aria-current="page">Интерьеры</span>
+        </nav>
+
+      </div>
+      <div class="divider"></div>
       <div class="container-fluid container-max-width">
-        <h3>Shared</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/styleguide.html" target="_blank">Styleguide</a>
-          <a href="/kare/footer.html" target="_blank">Footer</a>
-        </p>
-        <h3>Interiors</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/interior.html" target="_blank">Interior</a>
-          <a href="/kare/interiors.html" target="_blank">Interiors</a>
-        </p>
-        <h3>Showrooms</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/showroom.html" target="_blank">Showroom</a>
-          <a href="/kare/showrooms.html" target="_blank">Showrooms</a>
-        </p>
-        <h3>Cart</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/cart.html" target="_blank">cart</a>
-          <a href="/kare/cart-empty.html" target="_blank">cart-empty</a>
-          <a href="/kare/cart-spec.html" target="_blank">cart-spec</a>
-          <a href="/kare/cart-popup.html" target="_blank">cart-popup</a>
-        </p>
-        <h3>Checkout</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/checkout.html" target="_blank">checkout</a>
-          <a href="/kare/checkout-delivery.html" target="_blank">checkout-delivery</a>
-          <a href="/kare/checkout-delivery-sms-code.html" target="_blank">checkout-delivery-sms-code</a>
-          <a href="/kare/checkout-success-not-paid.html" target="_blank">checkout-success-not-paid</a>
-          <a href="/kare/checkout-success-paid.html" target="_blank">checkout-success-paid</a>
-        </p>
-        <h3>Catalog</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/catalog-1-level.html" target="_blank">catalog-1-level</a>
-          <a href="/kare/catalog-1-level-seo.html" target="_blank">catalog-1-level-seo</a>
-          <a href="/kare/catalog-2-level.html" target="_blank">catalog-2-level</a>
-          <a href="/kare/catalog-3-level.html" target="_blank">catalog-3-level</a>
-          <a href="/kare/catalog-not-found.html" target="_blank">catalog-not-found</a>
-        </p>
-        <h3>Product</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/product-full-view.html" target="_blank">product-full-view</a>
-          <a href="/kare/product-minimal-view.html" target="_blank">product-minimal-view</a>
-        </p>
-        <h3>Popups</h3>
-        <p class="d-flex flex-column">
-          <a href="/kare/popup-fast-order.html" target="_blank">popup-fast-order</a>
-          <a href="/kare/popup-fast-order-success.html" target="_blank">popup-fast-order-success</a>
-        </p>
-        <p class="d-flex flex-column">
-          <a href="/kare/popup-subscribe-product.html" target="_blank">popup-subscribe-product</a>
-          <a href="/kare/popup-subscribe-product-success.html" target="_blank">popup-subscribe-product-success</a>
-        </p>
-        <p class="d-flex flex-column">
-          <a href="/kare/popup-subscribe-product-2.html" target="_blank">popup-subscribe-product-2</a>
-          <a href="/kare/popup-subscribe-product-2-success.html" target="_blank">popup-subscribe-product-2-success</a>
-        </p>
-        <p class="d-flex flex-column">
-          <a href="/kare/popup-question.html" target="_blank">popup-question</a>
-          <a href="/kare/popup-question-success.html" target="_blank">popup-question-success</a>
-        </p>
-        <p class="d-flex flex-column">
-          <a href="/kare/popup-review.html" target="_blank">popup-review</a>
-          <a href="/kare/popup-review-success.html" target="_blank">popup-review-success</a>
-        </p>
-        <p class="d-flex flex-column">
-          <a href="/kare/popup-stores-map.html" target="_blank">popup-stores-map</a>
-        </p>
+        <h1 class="mb-4 mb-sm-6">Интерьеры</h1>
+        <div class="d-flex flex-column flex-md-row flex-md-nowrap mt-6 mt-sm-4 interiors-toolbar d-lg-none mx-auto">
+          <span class="btn btn-outline-secondary text-lef d-inline-flex align-items-center text-uppercase btn-sm interiors-filter-btn btn-width-large" uk-toggle="target:#offcanvas-interiors-filter">
+    <span class="icon icon_sm icon_sort-black icon_black-muted mr-2 btn__icon">
+      
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#funnel-black'></use></svg>
+
+    </span>
+          <span class="mr-2 font-weight-medium btn__text">Фильтры</span>
+          <span class="btn__badge px-2 mr-2">1</span>
+          <span class="icon icon_md icon_close-black icon_black-muted ml-auto btn__icon icon_hoverable">
+      
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#close-black'></use></svg>
+
+    </span>
+          </span>
+        </div>
+        <div class="row interiors-filter-row mt-5 d-none d-lg-flex">
+          <div class="col-4 d-flex interiors-filter-col">
+            <section class="interiors-filter-block">
+              <h6 class="interiors-filter-title text-gray">Назначение</h6>
+              <div class="interiors-filter-items">
+                <a href="#" class="interiors-filter-item text-gray-dark">Гостиная</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Столовая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Гостиная, столовая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Бары, рестораны, кафе</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Кабинет, офис</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+              </div>
+            </section>
+          </div>
+          <div class="col-4 d-flex interiors-filter-col">
+            <section class="interiors-filter-block">
+              <h6 class="interiors-filter-title text-gray">Стиль</h6>
+              <div class="interiors-filter-items">
+                <span class="interiors-filter-item">Арт-деко</span>
+                <span class="interiors-filter-item selected">Винтаж</span>
+                <span class="interiors-filter-item selected">Лофт</span>
+                <span class="interiors-filter-item">Модернизм</span>
+                <span class="interiors-filter-item">Ретро</span>
+                <span class="interiors-filter-item">Сканди</span>
+                <span class="interiors-filter-item">Шале</span>
+                <span class="interiors-filter-item selected">Эклектика</span>
+                <span class="interiors-filter-item">Эко</span>
+                <span class="interiors-filter-item">Этно</span>
+                <span class="interiors-filter-item">Этно</span>
+                <span class="interiors-filter-item">Этно</span>
+                <span class="interiors-filter-item">Этно</span>
+              </div>
+            </section>
+          </div>
+          <div class="col-4 d-flex interiors-filter-col">
+            <section class="interiors-filter-block">
+              <h6 class="interiors-filter-title text-gray">Назначение</h6>
+              <div class="interiors-filter-items">
+                <a href="#" class="interiors-filter-item text-gray-dark">Гостиная</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Столовая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Гостиная, столовая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Бары, рестораны, кафе</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Кабинет, офис</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+                <a href="#" class="interiors-filter-item text-gray-dark">Прихожая</a>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="interiors-card-container pt-5 pt-lg-6">
+          <div class="row interiors-list-row">
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-12 col-lg-6 interiors-list-col d-flex">
+              <figure class="interiors-card">
+                <div class="interiors-card__image-container mb-3 cover-background" style="background-image:url(http://via.placeholder.com/600x320)">
+                  <img class="interiors-card__image img-fluid invisible" src="http://via.placeholder.com/600x320" alt="" width="600" height="320">
+                </div>
+                <figcaption class="interiors-card__content">
+                  <h4 class="interiors-card__title mb-0 text-truncate">
+      <a class="interiors-card__link text-gray-dark text-arrow" href="">Brooklyn Nature</a>
+    </h4>
+                  <p class="interiors-card__descr typo-sm text-gray mb-0 mt-1">
+                    Древесина, стекло, сталь, декоративный камень, аутентичные аксессуары и живописные картины
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+        <div class="interiors-footer pt-2 mt-6">
+          <button class="btn btn-outline-secondary text-uppercase btn-block interiors-btn-more">Показать еще</button>
+          <nav aria-label="">
+            <div class="pagination justify-content-between mb-0">
+              <div class="page-item disabled">
+                <a class="page-link page-link_icon" href="#" tabindex="-1">
+                  <span class="icon icon_md icon_chevron-left icon_black icon_black-muted">
+          
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#chevron-left'></use></svg>
+
+        </span>
+                  <span class="sr-only">Назад</span>
+                </a>
+              </div>
+              <div class="d-flex">
+                <div class="page-item active"><a class="page-link" href="#">1</a>
+                </div>
+                <div class="page-item"><a class="page-link" href="#">2</a>
+                </div>
+                <div class="page-item"><a class="page-link" href="#">3</a>
+                </div>
+                <div class="page-item"><a class="page-link" href="#">4</a>
+                </div>
+                <div class="page-item"><a class="page-link" href="#">5</a>
+                </div>
+                <div class="page-item ml-3 d-none d-sm-block"><a class="page-link" href="#">Показать все</a>
+                </div>
+              </div>
+              <div class="page-item">
+                <a class="page-link page-link_icon" href="#">
+                  <span class="icon icon_md icon_chevron-right icon_black icon_black-muted">
+          
+  
+  <svg viewBox="0 0 1 1"><use xlink:href='images/icons.svg#chevron-right'></use></svg>
+
+        </span>
+                  <span class="sr-only">Вперед</span>
+                </a>
+              </div>
+            </div>
+            <div class="page-item mx-auto d-sm-none page-item-xs-all"><a class="page-link" href="#">Показать все</a>
+            </div>
+          </nav>
+
+        </div>
         <div class="divider-large"></div>
       </div>
 
@@ -983,45 +1211,8 @@
   </div>
 
 
-  <script src="bitrix/js/main/core/core.js?1447319034110032"></script>
   <script src="bitrix/js/main/jquery/jquery-1.8.3.min.js?143290390393636"></script>
-  <script src="bitrix/js/prmedia.tc/core.js?14684119582656"></script>
-  <script src="bitrix/js/main/ajax.js?144731839935509"></script>
-  <script src="bitrix/js/main/core/core_ajax.js?144731903434943"></script>
-  <script src="bitrix/js/main/core/core_window.js?144731898196650"></script>
-  <script src="bitrix/js/socialservices/ss.js?14329039021419"></script>
-  <script src="bitrix/js/main/core/core_popup.js?144731840539448"></script>
-  <script src="local/templates/kare_redisign/js/jqModal.js?14944915563355"></script>
-  <script src="local/templates/kare_redisign/js/jquery.fancybox.js?149449155645891"></script>
-  <script src="local/templates/kare_redisign/js/jquery.flexslider-min.js?149449155621817"></script>
-  <script src="local/templates/kare_redisign/js/jquery.maskedinput-1.2.2.js?14944915566897"></script>
-  <script src="local/templates/kare_redisign/js/jquery.easing.1.3.js?14944915568097"></script>
-  <script src="local/templates/kare_redisign/js/jquery.validate.js?149449155658314"></script>
-  <script src="local/templates/kare_redisign/js/equalize.min.js?1494491556588"></script>
-  <script src="local/templates/kare_redisign/js/jquery.alphanumeric.js?14944915561972"></script>
-  <script src="local/templates/kare_redisign/js/jquery.cookie.js?14944915563066"></script>
-  <script src="local/templates/kare_redisign/js/main.js?150909990266329"></script>
-  <script src="local/templates/kare_redisign/js/custom.js?150910031242178"></script>
-  <script src="local/templates/kare_redisign/js/slick.min.js?149449155641953"></script>
-  <script src="local/templates/kare_redisign/js/jquery.dotdotdot.js?149449155613142"></script>
-  <script src="local/templates/kare_redisign/js/jquery-ui.min.js?1494491556240439"></script>
-  <script src="local/templates/kare_redisign/js/jquery.ui-slider.js?149449155624324"></script>
-  <script src="local/templates/kare_redisign/js/jquery.ui.touch-punch.js?14944915565074"></script>
-  <script src="local/templates/kare_redisign/js/filter.js?150728975613242"></script>
-  <script src="local/templates/kare_redisign/js/jquery.history.js?149449155621571"></script>
-  <script src="local/templates/kare_redisign/js/device.min.js?14944915562606"></script>
-  <script src="local/templates/kare_redisign/js/cookie.js?1494491556966"></script>
-  <script src="local/templates/kare_redisign/js/jquery.inputmask.js?1494491556108940"></script>
-  <script src="local/templates/kare_redisign/js/jquery.elevateZoom-3.0.8.min.js?149449155632922"></script>
-  <script src="local/templates/kare_redisign/js/clipboard.min.js?149449155610112"></script>
-  <script src="local/templates/kare_redisign/js/selectize.js?149449155698265"></script>
-  <script src="local/templates/kare_redisign/js/jquery.mCustomScrollbar.concat.min.js?149449155645479"></script>
-  <script src="local/templates/kare_redisign/components/bitrix/catalog.smart.filter/main/script.js?150764653214912"></script>
-  <script src="javascripts/uikit.js"></script>
-  <script src="javascripts/app.js"></script>
-  <script type="text/javascript">
-    $( '.js-slider' ).filterSlider();
-  </script>
+  <script src="javascripts/interiors.js"></script>
 
 </body>
 

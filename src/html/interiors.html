@@ -1,0 +1,43 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  {% include "_interior/interiors-breadcrumb.html" %}
+</div>
+<div class="divider"></div>
+<div class="container-fluid container-max-width">
+  <h1 class="mb-4 mb-sm-6">Интерьеры</h1>
+  {% include "_interior/interiors-toolbar.html" %}
+  <div class="row interiors-filter-row mt-5 d-none d-lg-flex">
+  	<div class="col-4 d-flex interiors-filter-col">
+			{% include "_interior/interiors-filter-1.html" %}
+  	</div>
+  	<div class="col-4 d-flex interiors-filter-col">
+  		{% include "_interior/interiors-filter-2.html" %}
+  	</div>
+  	<div class="col-4 d-flex interiors-filter-col">
+  		{% include "_interior/interiors-filter-1.html" %}
+  	</div>
+  </div>
+	<div class="interiors-card-container pt-5 pt-lg-6">
+		<div class="row interiors-list-row">
+		  {% for i in [1,2,3,4,5,6,7,8,9,10] -%}
+		  {% if loop.index <= 10 %}
+			<div class="col-12 col-lg-6 interiors-list-col d-flex">
+				{% include "_interior/interiors-card.html" %}
+			</div>
+		  {% endif %}
+		  {%- endfor %}
+		</div>
+	</div>
+  <div class="interiors-footer pt-2 mt-6">
+  	<button class="btn btn-outline-secondary text-uppercase btn-block interiors-btn-more">Показать еще</button>
+  	{% include "_shared/pagination.html" %}
+  </div>
+  <div class="divider-large"></div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+  {% include "_interior/interiors-scripts.html" %}
+{% endblock %}

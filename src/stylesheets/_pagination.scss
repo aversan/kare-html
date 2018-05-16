@@ -21,3 +21,9 @@
 .page-item.disabled .page-link {
   opacity: .6;
 }
+
+.page-item-xs-all {
+   @include media-breakpoint-down(xs) {
+    margin-top: 20px;
+   }
+}
